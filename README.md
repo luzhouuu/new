@@ -57,6 +57,4 @@ We are still considering release of the larger models.
 ## License
 
 [FastText](./LICENSE)
-# UserstoreisTag
-# UserStoryTag
-# UserStoryTag
+
