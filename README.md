@@ -1,4 +1,3 @@
-```
 # UserStoryTag
 
 The tool is designed to atuomaticlly generate tag of user stories and recommend relevant user storeis.
@@ -22,6 +21,4 @@ pip -install -r requirement.txt
 Run model in your localhost
 ```
 python run_server.py
-```
-
 ```
