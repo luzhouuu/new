@@ -23,10 +23,16 @@ def predict():
     if request.method == 'POST':
         prompt = request.form['prompt'].strip()
 
+        if '"' in prompt:
+            prompt = prompt.replace('"', '')
 
         if prompt:
             (capability, sub_capability, epic) = FastText.predict(prompt)
+            capability = str(capability)
+            sub_capability = str(sub_capability)
+            epic = str(epic)
             result = capability+'/'+sub_capability+'/'+epic
+            prompt = str(prompt)
             sss = gotest.gotest(prompt)
 
         else:

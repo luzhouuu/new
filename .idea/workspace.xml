@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14224f58-f708-4793-9830-fb9fa8f45bde" name="Default Changelist" comment="" />
+    <list default="true" id="14224f58-f708-4793-9830-fb9fa8f45bde" name="Default Changelist" comment="updated on 15 June">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/FastText.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/FastText.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/gotest.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/gotest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/run_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/run_server.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1QjkPwOtN61q28PAzTLSW6M0pgy" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -22,7 +35,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="run_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run_server" type="PythonConfigurationType" factoryName="Python">
       <module name="USTag" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -43,11 +56,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.run_server" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -61,5 +69,22 @@
       <updated>1568291372036</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated on 15 June" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated on 15 June" />
   </component>
 </project>

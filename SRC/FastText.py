@@ -8,7 +8,6 @@ def get_tagsystem():
     return df_tagsystem
 
 
-
 def training_model():
 
     model = fasttext.train_supervised(input="../Files/training_data.txt", lr=0.5, epoch=25,

@@ -5,7 +5,7 @@ def gotest(temp):
     url = "http://localhost:2333/user_story/similar"
 
 
-    payload = "{\"title\":\"" + temp + "\",\"body\":\"\"}"
+    payload = "{\"title\":\"\",\"body\":\"" + temp + "\"}"
     headers = {
         'Content-Type': "application/json",
         'User-Agent': "PostmanRuntime/7.16.3",
