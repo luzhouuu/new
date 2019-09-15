@@ -13,15 +13,15 @@ Make sure that you run gpt-2 use model and seifer in your localhost.
 
 ### Installing
 
-​```
+```
 pip -install -r requirement.txt
-​```
+```
 
 ## Running the tests
 
 Run model in your localhost
-​```
+```
 python run_server.py
-​```
+```
 
 ```
