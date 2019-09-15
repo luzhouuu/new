@@ -34,4 +34,4 @@ Run model in your localhost
 python run_server.py
 ```
 ### Operation Interface
-
+![Image of operation interface](https://github.com/luzhouuu/UserstoreisTag/blob/master/p1.png)
