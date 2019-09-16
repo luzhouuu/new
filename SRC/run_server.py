@@ -31,17 +31,18 @@ def predict():
             prompt = prompt.replace('"', '')
 
         if prompt:
-            (capability, sub_capability, epic) = FastText.predict(prompt)
-            capability = str(capability)
-            sub_capability = str(sub_capability)
-            epic = str(epic)
-            result = capability+'/'+sub_capability+'/'+epic
+            texts = FastText.recommend_stories(title + prompt)
+            # (capability, sub_capability, epic) = FastText.predict(prompt)
+            # capability = str(capability)
+            # sub_capability = str(sub_capability)
+            # epic = str(epic)
+            # result = capability+'/'+sub_capability+'/'+epic
             prompt = str(prompt)
             texts2 = gotest.gotest(title, prompt)
 
         else:
-            result = ""
-        texts.append(result)
+            texts = ""
+        # texts.append(result)
         #texts2.append(sss)
 
 
