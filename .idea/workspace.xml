@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14224f58-f708-4793-9830-fb9fa8f45bde" name="Default Changelist" comment="updated on 15 June" />
+    <list default="true" id="14224f58-f708-4793-9830-fb9fa8f45bde" name="Default Changelist" comment="updated on 15 June">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/gotest.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/gotest.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
