@@ -17,12 +17,16 @@ app = Flask(__name__)
 @app.route('/', methods=('GET', 'POST'))
 def predict():
     prompt = ""
+    title = ""
     texts = []
     texts2 = []
 
     if request.method == 'POST':
+        title = request.form['title'].strip()
         prompt = request.form['prompt'].strip()
 
+        if '"' in title:
+            title = title.replace('"', '')
         if '"' in prompt:
             prompt = prompt.replace('"', '')
 
@@ -33,17 +37,15 @@ def predict():
             epic = str(epic)
             result = capability+'/'+sub_capability+'/'+epic
             prompt = str(prompt)
-            sss = gotest.gotest(prompt)
+            texts2 = gotest.gotest(title, prompt)
 
         else:
             result = ""
         texts.append(result)
-        texts2.append(sss)
+        #texts2.append(sss)
 
 
-    return render_template("page.html", prompt=prompt, texts=texts, sample=texts2)
-
-
+    return render_template("page.html",title= title, prompt=prompt, texts=texts, name1= texts2)
 
 if __name__ == "__main__":
     print(("* Loading model and Flask starting server..."

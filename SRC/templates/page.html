@@ -4,6 +4,8 @@
     <h1>Label The User Story</h1>
     <form method="post">
         <div class="form-group">
+            <label for="title">Please input your Title</label>
+            <textarea class="form-control" id="title" name="title" rows="1">{{ title }}</textarea>
             <label for="prompt">Please input your User Story</label>
             <textarea class="form-control" id="prompt" name="prompt" rows="6">{{ prompt }}</textarea>
         </div>
@@ -15,13 +17,13 @@
     <h2>Capability/Sub-Capability/Epic</h2>
     <div class="border" style="white-space: pre-line">{{ t }}</div>
     {% endfor %}
-    {% for f in sample %}
-    <h2>similar</h2>
-    <div class="border" style="white-space: pre-line">{{ f }}</div>
+
+    <h2>Similar User Stories</h2>
+    {% for f in name1 %}
+<div class="border" style="white-space: pre-line">{{ f }} </div>
     {% endfor %}
-
-
 
     <hr>
     <a href="https://fasttext.cc">[FastText]</a>
+    <a href="https://openai.com/blog/better-language-models/">[GPT-2]</a>
 {% endblock %}

@@ -1,11 +1,11 @@
 import requests
 import json
 
-def gotest(temp):
+def gotest(title, temp):
     url = "http://localhost:2333/user_story/similar"
 
 
-    payload = "{\"title\":\"\",\"body\":\"" + temp + "\"}"
+    payload = "{\"title\":\"" + title + "\",\"body\":\"" + temp + "\"}"
     headers = {
         'Content-Type': "application/json",
         'User-Agent': "PostmanRuntime/7.16.3",
@@ -21,7 +21,8 @@ def gotest(temp):
 
     response = requests.request("POST", url, data=payload, headers=headers)
     result = json.loads(response.text)
-    res = result[0]['body']
-
+    res = []
+    for i in range(6):
+        res.append('Title: ' + result[i]['title'] + '\n' + 'User Story: ' + result[i]['body'] + '\n')
 
     return res
