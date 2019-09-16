@@ -14,65 +14,48 @@
         </div>
     </form>
 
-    <h2 class="title">Recommand User Stories By Fast Text</h2>
-
-    <div class="seifer-card">
-        <div class="line">
-            <p class="title">Title:</p>
-            
-            <p class="text">Tag System recommend story 1</p>
-        </div>
-        <div class="line">
-            <p class="title">
-                User Story:
-            </p>
-            <p class="text">
-                As a Reporting Lead, I need tosjhsdbfkhbsjkbksdhfbskjldjfbsnmdc,nkhiubfklkjahbfhkkljahbshfc evaluate what reports will not be built for this project, so that I can inform stakeholders of the impacts
-            </p>
-
-        </div>
-    </div>
+    <h3 class="title">Recommand User Stories By Fast Text</h3>
 
     {% for t in texts %}
         <div class="seifer-card">
-                <div class="line">
-                    <p class="title">Title:</p>
-                    <p class="text">Tag System recommend story {{ loop.index }}</p>
-                </div>
-                <div class="line">
-                    <p class="title">
-                        User Story:
-                    </p>
-                    <p class="text">{{ t }}</p>
-                </div>
+            <div class="line">
+                <p class="title">Title:</p>
+                <p class="text">{{ t.title }}</p>
             </div>
+            <div class="line">
+                <p class="title">
+                    User Story:
+                </p>
+                <p class="text">{{ t.body }}</p>
+            </div>
+            <div class="line">
+                <p class="title">Similarity:</p>
+                <p class="text">{{ t }}% </p>
+            </div>
+        </div>
     {% endfor %}
 
     
-    <h2 class="title">Recommand User Stories By Seifer</h2>
+    <h3 class="title">Recommand User Stories By Seifer</h3>
     
 
     {% for f in name1 %}
-        <div style="white-space: pre-line">{{ f }} </div>
-
         <div class="seifer-card">
                 <div class="line">
                     <p class="title">Title:</p>
-                    
-                    <p class="text">Out-of-Scope Reports</p>
+                    <p class="text">{{ f.title }}</p>
                 </div>
                 <div class="line">
                     <p class="title">
                         User Story:
                     </p>
                     <p class="text">
-                        As a Reporting Lead, I need tosjhsdbfkhbsjkbksdhfbskjldjfbsnmdc,nkhiubfklkjahbfhkkljahbshfc evaluate what reports will not be built for this project, so that I can inform stakeholders of the impacts
+                        {{ f.body }}
                     </p>
-        
                 </div>
                 <div class="line">
                     <p class="title">Similarity:</p>
-                    <p class="text">45.38%</p>
+                    <p class="text">{{ f.Score }}% </p>
                 </div>
             </div>
     {% endfor %}

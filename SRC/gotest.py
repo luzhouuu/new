@@ -1,11 +1,15 @@
 import requests
 import json
 
-def gotest(title, temp):
+def gotest(title, temp, tagId=None):
     url = "http://localhost:2333/user_story/similar"
 
+    if tagId:
+        payload = {"title": title, "body": temp, "tagId": tagId}
+    else:
+        payload = {"title": title, "body": temp}
 
-    payload = "{\"title\":\"" + title + "\",\"body\":\"" + temp + "\"}"
+    print(payload)
     headers = {
         'Content-Type': "application/json",
         'User-Agent': "PostmanRuntime/7.16.3",
@@ -19,7 +23,8 @@ def gotest(title, temp):
         'cache-control': "no-cache"
         }
 
-    response = requests.request("POST", url, data=payload, headers=headers)
+    response = requests.request("POST", url, json=payload, headers=headers)
     result = json.loads(response.text)
-    
+    for i in range(len(result)):
+        result[i]['Score'] = str(result[i]['Score'] * 100)[:5]
     return result

@@ -28,21 +28,23 @@ def predict():
             prompt = prompt.replace('"', '')
 
         if prompt:
-            texts = FastText.recommend_stories(title + prompt)
+            tagid = FastText.predict_tag(title + prompt)
             # (capability, sub_capability, epic) = FastText.predict(prompt)
             # capability = str(capability)
             # sub_capability = str(sub_capability)
             # epic = str(epic)
             # result = capability+'/'+sub_capability+'/'+epic
             prompt = str(prompt)
+            print(prompt)
             texts2 = gotest.gotest(title, prompt)
+            texts = gotest.gotest(title, prompt, tagid)
 
         else:
             texts = ""
         # texts.append(result)
         #texts2.append(sss)
 
-    return render_template("page.html",title= title, prompt=prompt, texts=texts, name1= texts2)
+    return render_template("page.html", title=title, prompt=prompt, texts=texts, name1= texts2)
 
 
 if __name__ == "__main__":

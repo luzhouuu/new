@@ -34,6 +34,18 @@ def predict(userstory):
     df_result = df_tags[df_tags['TagID'] == Label_Id]
     return (df_result['Capability'].iloc[0],df_result['Sub-Capability'].iloc[0],df_result['Epic'].iloc[0])
 
+def predict_tag(userstory):
+    model_file = TAG_PATH +  '/Model/model_userstory.bin'
+    if not os.path.exists(model_file):
+        training_model()
+    classifier = fasttext.load_model(model_file)
+
+    label = classifier.predict(userstory)
+    Label_Id = int(label[0][0][9:])
+
+    return Label_Id
+
+
 
 
 def recommend_stories(userstory):
@@ -68,7 +80,7 @@ def tag_batchjob():
     df_result.to_csv(TAG_PATH+'/Files/result.csv', columns=['Tag', 'Story'], index=False)
 
 if __name__ == "__main__":
-    recommend_stories('HR stories, as an HR, I would like')
+    print(predict_tag('HR stories, as an HR, I would like'))
 
 
 

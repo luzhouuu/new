@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14224f58-f708-4793-9830-fb9fa8f45bde" name="Default Changelist" comment="updated on 15 June">
-      <change afterPath="$PROJECT_DIR$/SRC/static/page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/FastText.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/FastText.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/gotest.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/gotest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SRC/run_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/run_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SRC/templates/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/templates/page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +36,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.connect">
+  <component name="RunManager" selected="Python.run_server">
     <configuration name="connect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="USTag" />
       <option name="INTERPRETER_OPTIONS" value="" />
