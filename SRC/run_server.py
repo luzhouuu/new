@@ -2,16 +2,13 @@
 
 import fasttext
 import pandas as pd
-import FastText
-import gotest
+import SRC.FastText as FastText
+import SRC.gotest as gotest
 
 import numpy as np
 from flask import Flask, render_template, request
 
-
-
 app = Flask(__name__)
-
 
 
 @app.route('/', methods=('GET', 'POST'))
@@ -45,8 +42,8 @@ def predict():
         # texts.append(result)
         #texts2.append(sss)
 
-
     return render_template("page.html",title= title, prompt=prompt, texts=texts, name1= texts2)
+
 
 if __name__ == "__main__":
     print(("* Loading model and Flask starting server..."

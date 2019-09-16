@@ -21,8 +21,5 @@ def gotest(title, temp):
 
     response = requests.request("POST", url, data=payload, headers=headers)
     result = json.loads(response.text)
-    res = []
-    for i in range(5):
-        res.append('Title: ' + result[i]['title'] + '\n' + 'User Story: ' + result[i]['body'] + '\n' + 'Similarity: '+ str(round(result[i]['Score'], 4)))
-
-    return res
+    
+    return result
