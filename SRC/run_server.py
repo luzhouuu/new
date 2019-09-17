@@ -38,7 +38,6 @@ def predict():
             print(prompt)
             texts2 = gotest.gotest(title, prompt)
             texts = gotest.gotest(title, prompt, tagid)
-
         else:
             texts = ""
         # texts.append(result)
