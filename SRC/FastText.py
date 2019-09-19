@@ -5,11 +5,11 @@ import os
 CURR_PATH = os.path.dirname(__file__)
 TAG_PATH = os.path.dirname(CURR_PATH) #获得d所在的目录,即d的父级目录
 
-
+tag = 'Capability'
 
 def get_tagsystem():
     print(TAG_PATH)
-    df_tagsystem = pd.read_csv(TAG_PATH+ "/Files/tag_system.csv")
+    df_tagsystem = pd.read_csv(TAG_PATH+ "/Files/"+ tag +"TagID.csv")
     df_tagsystem['Tag'] = df_tagsystem.applymap(lambda x: '__label__' + str(x))['TagID']
     return df_tagsystem
 
