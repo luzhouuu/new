@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14224f58-f708-4793-9830-fb9fa8f45bde" name="Default Changelist" comment="updated on 15 June">
-      <change afterPath="$PROJECT_DIR$/Files/training_Epic.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/training_Sub-Capability.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SRC/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataPreprocess/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocess/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/model_userstory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/FastText.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/FastText.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/model_Capability.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/model_Epic.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/model_Sub-Capability.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/run_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/run_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cap.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cap.training" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cooking.train" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.run_server">
     <configuration name="LabelTag" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="USTag" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,16 +191,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated on 15 June" />
     <option name="LAST_COMMIT_MESSAGE" value="updated on 15 June" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataPreprocess/LabelTag.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

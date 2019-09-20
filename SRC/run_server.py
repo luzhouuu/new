@@ -28,7 +28,7 @@ def predict():
             prompt = prompt.replace('"', '')
 
         if prompt:
-            tagid = FastText.predict_tag(title + prompt)
+            texts = FastText.predict_tag(prompt)
             # (capability, sub_capability, epic) = FastText.predict(prompt)
             # capability = str(capability)
             # sub_capability = str(sub_capability)
@@ -36,8 +36,8 @@ def predict():
             # result = capability+'/'+sub_capability+'/'+epic
             prompt = str(prompt)
             print(prompt)
-            texts2 = gotest.gotest(title, prompt)
-            texts = gotest.gotest(title, prompt, tagid)
+            # texts2 = gotest.gotest(title, prompt)
+            # texts = gotest.gotest(title, prompt, tagid)
         else:
             texts = ""
         # texts.append(result)

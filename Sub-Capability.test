@@ -1,0 +1,26 @@
+__label__3	As a\(n) Any Service User, I want to capture multiple notes to a Case with related date stamp and Agent name -- so that case history is tracked efficiently
+__label__3	As a\(n) Any Service User, I want to search for previous calls / cases by consumer info or case # -- so that I can find previous Consumer records efficiently
+__label__3	As a\(n) Any Service User, I want to transfer the ownership of a case that I own to the responsible rep as its escalated -- so that cases can be reported on accurately
+__label__0	As a\(n) Any Service User, I want to capture multiple issues for a Case aligned to a single product -- so that issues can efficiently reported on
+__label__3	As a\(n) Any Service User, I want to put a case in follow-up status while researching issue -- so that I am aware of cases that are pending resolution
+__label__3	As a\(n) Business Admin, I want to import Cases into Salesforce from a formatted file -- so that store reports can be worked through by Agents
+__label__3	As a\(n) Any Service User, I want to view the details of cases submitted by Consumers online \-\- so that cases from online users can be managed and resolved   1. Web form fields map to Case (Record type: Consumer Web)    2. Case generated in Salesforce and assigned to Web Queue    3. Agent selects an open case and assigns to self for handling    4. Agent reviews un-mapped lookup fields (UPC, Contact, etc.) and creates relationships    5. Agent handles case as normal
+__label__3	As a\(n) Any Service User, I want to attach digital pictures to a case \-\- so that there is photographic context to a case
+__label__3	As a\(n) Any Service User, I want to transfer cases to the queue and as a user assigned to a queue, I want to pull cases out of the related (ingredient inquiry, escalated, lab, claims, etc.) -- so that cases can be handled efficiently and by the right people    Design: captured on the Queues / Groups tab in the Service data dictionary.
+__label__3	As a Service User, I want to to see 'prep stages' for an incoming contact via email/chat/text with predetermined fields that would fill in on the case based off what the consumer enters in the contact us portion. ‚Äì so that cases can be handled efficiently
+__label__3	As a\(n) Any Service User, I want to quickly pivot between Case and Contact records so that I can refer to caller information during the interaction
+__label__3	As a\(n) Any Service User, I want to Sections of the case with read only access vs edit abilities based off users security level \-\- so that sensitive data is protected
+__label__3	As a\(n) Any Service User, I want to use free form case fields (mfg code, store address, etc.) \-\- so that relevant information can be captured
+__label__3	As a\(n) Any Service User, I want to see a drop down/wildcard search for specific case fields (UPC, Subject code, Subject code detail, store) -- so that relevant records can be found quickly
+__label__3	As a\(n) Any Service User, I want to capture at least 110 fields on a case (fully reportable) \-\- so that we can capture adequate detail around the case
+__label__3	As a\(n) Any Service User, I want to relate a Case to a Product \-\- so that XXX can report on case volume for each product
+__label__3	As a\(n) Any Service User, I want to attach a Call to a Case \-\- so that call history can be created on a case
+__label__3	As a\(n) Any Service User, I want to capture Tasks on a case \-\- so that actions can be assigned for follow-up
+__label__3	As a\(n) Any Service User, I want to capture Comments on a case \-\- so that more detail on a case can be captured
+__label__3	As a\(n) Any Service User, I want to be systematically assigned cases based on a set of criteria \-\- so that cases are routed efficiently and accurately
+__label__3	As a\(n) Any Service User, I want to ensure that Cases are validated based on criteria \-\- so that I can maintain data integrity / quality
+__label__3	As a\(n) Any Service User, I want to capture case category and case subject detail on a case \-\- so that XXX can report on the types of cases that are being handled
+__label__3	As a\(n) Any Service User, I want to capture issue codes and sub-codes on a case \-\- so that XXX can report on the types of cases that are being handled
+__label__3	As a\(n) Any Service User, I want to have systematically escalated to a 'Second Escalation' after they have been open for 2 business day \-\- so that cases that have been open for a longer duration can be prioritized
+__label__3	As a( n ) Any Service User, I want to systematically escalate cases so that older cases can be prioritized
+__label__3	As Any User, I want to assign cases to queues so that cases can be handled efficiently    PFA the list of queues created as part of this story.
