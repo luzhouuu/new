@@ -1,0 +1,40 @@
+__label__0	As a Transportation Rep I would like to be able to change the status to "Responded" if the allowance code is either 21 or 88, so that I can submit for approval if it is a transportation related complaint
+__label__0	I would like to see the shipping quantity and UOM when adding affected products through affected product button for extra visibility
+__label__0	I would like to see whether an Invoice record is an invoice, credit memo or debit memo so that I do not accidentally create a complaint from a credit memo or debit memo
+__label__0	As an RQM, I would like to easily access the approval button when a complaint is over $3,000
+__label__0	I would like to see a case number and case link when in the escalation email when I have a complaint that hasn't been touched for 48 hours
+__label__0	I would like to be able to close-cancel a complaint when entered in error without having any validation rules, so that I don't have to add details I don't have before closing the complaint
+__label__0	I would like the plant dashboard to display only the information related to my shipping plant, so that I don't need to go into the report itself to manually filter by my plant
+__label__0	Add fields to invoice integration and layout including:  Shipment ID  Oracle Order Number  Order Control #
+__label__0	I would like the Sales Representative field on the case to be populated on the complaint with the account owner from the account in the Account Name field rather than the account owner from the contact
+__label__0	I would like to see a dropdown of the available queues (plant, CSR and transportation queues) when changing the owner of a complaint so I can more quickly find the right queue when I cannot remember the name
+__label__0	As a plant rep, if I select 04 good material on a complaint, I should not have to send this for approval even if it's over $3,000
+__label__0	As a transportation rep, If the allowance code on a complaint is code 21, I would like to be able to change the status to responded and submit the complaint for approval without sending it back to the plant
+__label__0	I would like to track the amount of time a complaint spends in the transportation or CSR queue so it does not impact the plant DTR/DTC.
+__label__0	I would like to view the product on the case based on the affected product selected on the complaint.
+__label__1	As a Sales Rep, I would like to receive a notification if my complaint has been closed cancelled, so that I can appropriately contact my customer
+__label__0	I would like the owner of the complaint to update to the Sales Representative on that complaint after the complaint is closed
+__label__0	I would like to be able to calculate the total amount of the complaint so that the credit team can accurately issue the correct credit
+__label__0	If the user selects allowance code 04, the user has to ensure that there is a value above 0 in the "Good Material" field on the affected product, so that accounting can document the credit correctly
+__label__0	I would like to ensure that I can only advance to the next status with a "Published" complaint response.
+__label__0	I would like to support email to case functionality to expedite creation of cases
+__label__0	I would like the plant reps to be prevented from moving the status to Responded if they code the complaint as a CSR or Transportation Issue but do not have a CSR or Transportation Response added
+__label__0	I would like to be able to take a complaint Off Hold, so that I can return to the previous status and continue working on the complaint
+__label__0	I would like to be able to link a Project Record in Salesforce, so that I can pull job information onto the complaint
+__label__0	As a user, I need the ability to see the credit associated with a Complaint case so that I can view details on my credit
+__label__0	I would like to be able to close cancel a complaint record, so that I can close out the complaint for $0 without having to enter in all relevant information
+__label__0	I would like to be able to document the cost of freight for returned material, so that it can impact the complaint total appropriately
+__label__0	I would like for the user to be able to progress forward through statuses, and be able to go back statuses as permitted by the business rules, so that the user can change the status appropriately to efficiently resolve the complaint
+__label__0	I would like to be able to apply a restocking fee to returned material, so that I can update the complaint total to account for this fee
+__label__0	I would like to be able to route a complaint to a CSR team so that I can track CSR related issues and have the appropriate team sign off on the reason of the complaint
+__label__0	As a user I would like to be able to close a complaint, so that I can lock down information and track the days to closure
+__label__0	I would like to be able to handle complaints from my mobile device
+__label__0	As a XXXX User, I want the Plant and RQM lookup fields to be autopopulated when an invoice is attached to a Complaint, so that roles and responsibility can be determined
+__label__0	I would like the system to ensure that the value in the "Complaint Total" field matches the total of all Allowance Code Value fields, so that I can make sure the value of the credit matches the calculation
+__label__0	As a Plant Rep or RQM I would like to be able to capture the product code for the items on the complaint so I can report as to which products are having issues
+__label__0	I would like certain information to populate based on status updates, or have status changes occur automatically based on specific information entered in the system
+__label__0	As a user I would like to be notified regarding the status of credits so I can stay informed as to when the complaint can be closed
+__label__0	As a user, I would like to be able to route my complaint for approval, so that I can obtain necessary sign off on my complaint and send to the credit team as needed
+__label__0	Complaint Reporting by Plant - Current DE 102 EXCEL Report and Days to Close / Days to Resolution Report will not be available after Complaint Track Go - Live.   This reporting is tied to Manufacturing incentive plans and thus needs replication in the new Complaint Handling Track
+__label__0	As a CSR Sales Rep, Plant Rep, RQM or Transportation Rep I would like to be able to Create a new contact for an account after receiving a complaint---so that I can Document who contacted regarding a complaint and who to reach out to for more information if needed
+__label__0	As a Customer I would like to be able to receive a notification when my complaint is created, so that I know my issue is being worked on

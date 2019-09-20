@@ -9,24 +9,25 @@ tag = 'Capability'
 
 def get_tagsystem():
     print(TAG_PATH)
-    df_tagsystem = pd.read_csv(TAG_PATH+ "/Files/"+ tag +"TagID.csv")
+    df_tagsystem = pd.read_csv(TAG_PATH+ "/Files/"+ tag +"CapabilityTagID.csv")
     df_tagsystem['Tag'] = df_tagsystem.applymap(lambda x: '__label__' + str(x))['TagID']
     return df_tagsystem
 
 
 def training_model():
-    training_file = TAG_PATH+ "/Files/training_data.txt"
+    training_file = TAG_PATH+ "/Files/training_Capability.txt"
 
     model = fasttext.train_supervised(input=training_file, lr=0.5, epoch=25,
                                       wordNgrams=2, bucket=200000, dim=50, loss='ova')
-    model.save_model(TAG_PATH+"/Model/model_userstory.bin")
+    model.save_model(TAG_PATH+"/Model/model_Capability.bin")
     #result = model.test("C:/Users/lbao009/Documents/testing_data.txt")
 
 def predict(userstory):
-    model_file = TAG_PATH +  '/Model/model_userstory.bin'
+    model_file = TAG_PATH + '/Model/model_Capability.bin'
     if not os.path.exists(model_file):
         training_model()
     df_tags = get_tagsystem()
+    # laod model
     classifier = fasttext.load_model(model_file)
 
     label = classifier.predict(userstory)
@@ -44,9 +45,6 @@ def predict_tag(userstory):
     Label_Id = int(label[0][0][9:])
 
     return Label_Id
-
-
-
 
 def recommend_stories(userstory):
     model_file = TAG_PATH +  '/Model/model_userstory.bin'
