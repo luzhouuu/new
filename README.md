@@ -31,6 +31,9 @@ Insteall all packages:
 
 ```
 pip3 install -r requirements.txt
+brew install postgresql
+pip3 install psycopg2
+pip3 install config
 ```
 
 make sure you have open other repos, then run:

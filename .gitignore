@@ -1,4 +1,11 @@
 .idea/*
-
+Sub-Capability.train
+Sub-Capability.test
 *.log
 *.bin
+*.train
+*.test
+
+database.ini
+
+WordCloud.py

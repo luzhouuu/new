@@ -7,7 +7,7 @@ import SRC.gotest as gotest
 
 import numpy as np
 from flask import Flask, render_template, request
-
+import main
 app = Flask(__name__)
 
 
@@ -19,16 +19,17 @@ def predict():
     texts2 = []
 
     if request.method == 'POST':
-        title = request.form['title'].strip()
         prompt = request.form['prompt'].strip()
 
-        if '"' in title:
-            title = title.replace('"', '')
-        if '"' in prompt:
-            prompt = prompt.replace('"', '')
+        # if '"' in title:
+        #     title = title.replace('"', '')
+        # if '"' in prompt:
+        #     prompt = prompt.replace('"', '')
 
         if prompt:
-            texts = FastText.predict_tag(prompt)
+            taglable = main.predict(prompt, tag = 'Sub-Capability')
+            tagid - main.get_tagId(taglable, tag = 'Sub-Capability')
+            retult = RequestGoTag.requestGoTag(prompt, tagid)
             # (capability, sub_capability, epic) = FastText.predict(prompt)
             # capability = str(capability)
             # sub_capability = str(sub_capability)

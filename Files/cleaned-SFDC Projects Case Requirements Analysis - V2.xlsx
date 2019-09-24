@@ -1,0 +1,735 @@
+,No.,As,I want to ,So that,User Story,Acceptance Criteria,Capability,Sub-Capability,Epic,Unnamed: 9
+0,,,,,"As a Transportation Rep I would like to be able to change the status to ""Responded"" if the allowance code is either 21 or 88, so that I can submit for approval if it is a transportation related complaint","Update validation rule (which already allows transportation to respond to a code 21), to include code 88 in the logic. Additionally, there are Canadian specific codes that need to be added to this list.
+  Additionally, give plant reps the ability to update allowance code fields
+ 
+  Update Allowance code 88 and 89 to say ""<$300"" rather than ""<$200""
+  
+  Additionally, Plant Reps will not be able to respond to complaints that are code 21 or 88. Build validation rule that prevents plant reps from doing so.",Plan and manage customer service operations,Manage customer complaints,Manage shipment,Complete shipment processing
+1,,,,,I would like to see the shipping quantity and UOM when adding affected products through affected product button for extra visibility,,Plan and manage customer service operations,Manage customer complaints,Manage shipment,Inspect shipment related information
+2,,,,,"I would like to see whether an Invoice record is an invoice, credit memo or debit memo so that I do not accidentally create a complaint from a credit memo or debit memo",Add visible column on search view for transaction type,Plan and manage customer service operations,Manage customer complaints,Manage invoice,Inspect invoice
+3,,,,,"As an RQM, I would like to easily access the approval button when a complaint is over $3,000","Move Approve/Reject buttons to case action section when a complaint has been submitted for approval and is over $3,000",Plan and manage customer service operations,Manage customer complaints,Approve complaint,Approve complaint under certain criteria
+4,,,,,I would like to see a case number and case link when in the escalation email when I have a complaint that hasn't been touched for 48 hours,"Please add a filter to include only Complaint Record Types***
+  The message should read:
+  A complaint assigned to you has been inactive for 2 days. Please take the appropriate actions to resolve this complaint
+  
+  Case Number: 
+  Case Link:",Plan and manage customer service operations,Manage customer service workforce,Manage performance,Notify on idle complaint
+5,,,,,"I would like to be able to close-cancel a complaint when entered in error without having any validation rules, so that I don't have to add details I don't have before closing the complaint","Current picklist values for ""Closed Cancelled Reason"" are:
+  Closed for $0 Product Within Specification
+  Closed for $0 Informational Complaint
+  Complaint Created in Error
+  The Closed Cancelled status has a validation rule that the user must enter in product and nature codes, and have at least 1 product assigned to the complaint. 
+  When a user closes the complaint with the reason ""Complaint Created in Error"", they should be able to do so at any time with no required fields to be entered. Also, any user profile can perform this action if they are the case owner",Plan and manage customer service operations,Manage customer complaints,Close complaint,Close complaint with errors
+6,,,,,"I would like the plant dashboard to display only the information related to my shipping plant, so that I don't need to go into the report itself to manually filter by my plant",,Plan and manage customer service operations,Manage customer complaints,Manage shipment,Inspect shipment related information
+7,,,,,"Add fields to invoice integration and layout including:
+  Shipment ID
+  Oracle Order Number
+  Order Control #",,Plan and manage customer service operations,Manage customer complaints,Manage invoice,Enrich invoice detail
+8,,,,,I would like the Sales Representative field on the case to be populated on the complaint with the account owner from the account in the Account Name field rather than the account owner from the contact,,Plan and manage customer service operations,Manage customer complaints,Sales support,
+9,,,,,"I would like to see a dropdown of the available queues (plant, CSR and transportation queues) when changing the owner of a complaint so I can more quickly find the right queue when I cannot remember the name",,Plan and manage customer service operations,Manage customer service workforce,Manage performance,
+10,,,,,"As a plant rep, if I select 04 good material on a complaint, I should not have to send this for approval even if it's over $3,000",,Plan and manage customer service operations,Manage customer complaints,Complaint process control,
+11,,,,,"As a transportation rep, If the allowance code on a complaint is code 21, I would like to be able to change the status to responded and submit the complaint for approval without sending it back to the plant","Currently users with Transportation profile cannot change the status to ""Responded"" and must send it back to the plant to respond and submit for approval.
+  
+  
+  
+  Validation rule restricting the Transportation team from changing the status to responded would have to be lifted, and potentially a second validation would need to be added to ensure that the allowance code value is 21.",Plan and manage customer service operations,Manage customer complaints,Manage shipment,
+14,,,,,I would like to track the amount of time a complaint spends in the transportation or CSR queue so it does not impact the plant DTR/DTC.,,Plan and manage customer service operations,Manage customer service workforce,Manage performance,
+15,,,,,I would like to view the product on the case based on the affected product selected on the complaint.,Products will be in Salesforce as part of R7,Plan and manage customer service operations,Manage customer complaints,Technical support,
+16,,,,,"As a Sales Rep, I would like to receive a notification if my complaint has been closed cancelled, so that I can appropriately contact my customer","When the status of the complaint changes to ""Closed Cancelled"", send a chatter notification to the user in the 'Sales Representative' field on the case record. The message will say.
+  
+  A complaint for one of your accounts has been Closed Cancelled.
+  
+  Case Number:
+  
+  Account Name:
+  
+  Contact Name:
+  
+  Closed Cancelled Reason:
+  
+  Case Link:",Measure and evaluate customer satisfaction,Measure customer satisfaction level,Customer feedback,
+17,,,,,I would like the owner of the complaint to update to the Sales Representative on that complaint after the complaint is closed,"Workflow Rule:
+  
+  
+  
+  When the complaint status = Closed or Closed Cancelled, the Case Owner field will update to the user in the Sales Representative field",Plan and manage customer service operations,Manage customer complaints,Sales support,
+18,,,,,I would like to be able to calculate the total amount of the complaint so that the credit team can accurately issue the correct credit,"The calculation for the Complaint Total field is as follows
+  
+  
+  
+  Sum of (Material Cost, Labor Cost and Other Cost)
+  
+  
+  
+  The calculation will no longer include the addition of the field ""Inbound Freight Cost""",Plan and manage customer service operations,Manage customer complaints,Manage customer credit,Issue credit
+19,,,,,"If the user selects allowance code 04, the user has to ensure that there is a value above 0 in the ""Good Material"" field on the affected product, so that accounting can document the credit correctly","Validation Rule:
+  If there is an allowance code of ""04 RMR Good Material"", there must be a value greater than 0 in the field ""Good Material"" on the Affected Product before the user can change the status from ""Response Reviewed"" to ""Responded"".
+  
+  The error message will read ""Please enter a value for 'Good Material' using the Affected Product case action button""",Plan and manage customer service operations,Manage customer complaints,Manage customer credit,Validate credit
+20,,,,,"I would like to ensure that I can only advance to the next status with a ""Published"" complaint response.","Solution:
+  
+  
+  
+  Validation rule: In order to move the status from Entered to Entered and Sent, the user must have a customer statement and investigator statement complaint response BOTH with the status of ""Published"". If either or both are in status of ""Draft"", the system will not allow the user to progress.
+  
+  
+  
+  Validation Rule: In order to move from Response Reviewed to Responded, the user must have a Plant Answer complaint response with the status of ""Published"". If in ""Draft"" status, the system will not allow the user to progress.
+  
+  
+  
+  Transportation Statement and Customer Service statement will not have ""Draft"" option. All statements will be ""Published"". If the Transportation or Customer Service user would like to change their response, they will need to add an additional complaint response.
+  
+  
+  
+  Additionally, when a response is saved in the ""Draft"" status, it will continue to be editable by that owner. Once the response is ""Published"", it will be locked for editing.
+  
+  
+  
+  System Admin will NOT be able to edit ""Published"" responses
+  
+  
+  
+  No user can delete a response once ""Published""",Plan and manage customer service operations,Manage customer complaints,Complaint process control,
+21,,,,,I would like to support email to case functionality to expedite creation of cases,Likely R6 or R7 functionality,Plan and manage customer service operations,Manage customer complaints,Create complaint,
+22,,,,,I would like the plant reps to be prevented from moving the status to Responded if they code the complaint as a CSR or Transportation Issue but do not have a CSR or Transportation Response added,"Solution
+  
+  Validation rules:
+  
+  If Allowance Code = 81 and there is no CSR response on the complaint response related list, the user cannot move the status to Responded
+  
+  If Allowance Code = 71 or 72 and there is no Transportation response on the complaint response related list, the user cannot move the status to Responded",Plan and manage customer service operations,Manage customer complaints,Complaint process control,
+24,,,,,"I would like to be able to take a complaint Off Hold, so that I can return to the previous status and continue working on the complaint","Solution:
+ 
+  Once a complaint has been put ""On Hold"" by the RQM, the owner of the complaint will be able to take the complaint ""Off Hold"" by manually selecting the status prior to the complaint being put on hold. 
+ 
+  The system will track the prior status to On Hold, and a validation rule will be built to ensure that the user can ONLY send the complaint back to that prior status (Example: if the status is Response Reviewed, and then the RQM changes the status to On Hold, the owner can only change the status back to Response Reviewed once he/she is ready to take the complaint off hold)",Plan and manage customer service operations,Manage customer complaints,Complaint process control,
+25,,,,,"I would like to be able to link a Project Record in Salesforce, so that I can pull job information onto the complaint","Solution:
+ Remove the current field ""XXXX Opportunity Name"", and replace with a field called ""XXXX Project Name"" which will be a lookup to the Project object.
+ 
+  Update the job fields in the Project Details section to pull the relevant information from the Project Record, including;
+  
+  Project Name
+  Project State/Prov
+  Project City
+  Project Street Address
+  Project Postal Code
+ 
+  These Project fields above can be manually entered into, but will be overridden with data if a Job Lead Record is linked
+  Additionally, if a Project record is linked, and then later deleted, the Project Fields will also be delete",Plan and manage customer service operations,Manage customer complaints,Enrich reference data,
+26,,,,,"As a user, I need the ability to see the credit associated with a Complaint case so that I can view details on my credit","Add a field called ""Credit Memo #"" on Invoice header",Plan and manage customer service operations,Manage customer complaints,Manage customer credit,Validate credit
+27,,,,,"I would like to be able to close cancel a complaint record, so that I can close out the complaint for $0 without having to enter in all relevant information","I will know this is complete when the Plant Rep and RQM has the ability to close a complaint for $0. A Sales Rep, CSR, Transportation Rep or CSA rep will not be able to close a complaint for $0 
+  The user can select the ""Closed Cancelled"" and view the Key Fields Section below (which only shows the field ""Closed Cancelled Reason"". The user can enter in the ""Closed Cancelled Reason"" which has picklist values of;
+  ""Closed For $0 - Product Within Specification""
+  ""Closed For $0 - Informational Complaint""
+  ""Complaint Opened in Error""
+  Before saving the Closed Cancelled status, the user must enter the following information
+  Product Group
+  
+  Product Code
+  
+  Business Unit
+  
+  Nature Code Category
+  
+  Nature Code Sub-Category
+  
+  Plant Answer (In complaint response related list)
+  
+  Closed Cancelled Reason
+  
+  
+  
+  The Complaint Value DOES NOT have to be $0 before closing.
+  
+  
+  
+  Complaint should lock after being Closed/Cancelled
+  
+  
+  
+  ""Closed Cancelled"" and ""On Hold"" statuses should not be visible on the page layout once the status is ""Approved""
+  
+  
+  
+  RQMs will NOT have access to delete complaints",Plan and manage customer service operations,Manage customer complaints,Close complaint,
+29,,,,,"I would like to be able to document the cost of freight for returned material, so that it can impact the complaint total appropriately","I will know this is complete when I can add an amount for inbound freight related to an RMR, and this amount is added to the complaint total.
+ 
+  Solution:
+  
+  If an amount is added to the ""Inbound Freight Amount"" field, that amount is added to the ""Complaint Total"" field
+  
+  The ""Inbound Freight Amount"" field cannot be negative",Plan and manage customer service operations,Manage customer complaints,Financial control,Track restocking fee
+30,,,,,"I would like for the user to be able to progress forward through statuses, and be able to go back statuses as permitted by the business rules, so that the user can change the status appropriately to efficiently resolve the complaint","Solution: 
+  A User must progress through each status before closing a complaint. Thus a user cannot skip a status (excluding ""On Hold"").
+  A User is not able to send a complaint back to a previous status.
+  A User cannot create a complaint with a status other than ""Entered""
+  CSR, Sales and Transportation cannot update the status to ""Responded""",Plan and manage customer service operations,Manage customer complaints,Complaint process control,
+31,,,,,"I would like to be able to apply a restocking fee to returned material, so that I can update the complaint total to account for this fee","I will know this is complete when the user has the ability to apply a restocking fee to returned material, and have that amount reflect against the complaint total.
+ 
+  Solution: Create Case field ""Restocking Fee"" (percentage) and place in the Return Material Section.
+ 
+  If a restocking fee percentage is added, remove this percentage from the Material Cost field. (i.e. if Material Cost = $100 and a Restocking Fee of 20% is added, then the Material Cost would update to $80). If the Material Cost is changed using the affected products button after a restocking fee was added, the new material cost should still reflect that restocking fee (i.e after the Material Cost updated to $80, the user changed the quantity affected, resulting in a new material cost of $200, the restocking fee of 20% should still apply and result in a material cost of $160)
+ 
+  Restocking fee can have decimals (i.e. 12.25%)",Plan and manage customer service operations,Manage customer complaints,Financial control,Charge restocking fee
+32,,,,,I would like to be able to route a complaint to a CSR team so that I can track CSR related issues and have the appropriate team sign off on the reason of the complaint,"I will know this is complete when I can assign a complaint to a CSR team queue and the members of that queue
+  
+  
+  
+  Solution: Create all CSR team queues and create their respective groups. When a complaint is assigned to a CSR team queue, the members of that queue will receive an email notification stating, ""A complaint has been assigned to your team, please respond accordingly""
+  
+  
+  
+  The queues and groups to be created include:
+  
+  
+  
+  Commercial Gypsum Team/International
+  
+  Commercial Ceilings Team
+  
+  Performance Materials
+  
+  National Accounts & Retail Ceilings Team
+  
+  
+  
+  Please delete the ""CSR Team Leader"" (the above queues will replace the queue created as a part of sprint 1).",Plan and manage customer service operations,Manage customer complaints,Complaint process control,
+36,,,,,"As a user I would like to be able to close a complaint, so that I can lock down information and track the days to closure","I will know this is complete when I can change the status of a complaint to closed after all necessary information is completed.
+ 
+  All fields in the ""Credit Information"" section have to be entered before moving the status to Closed. Once all this data is entered, the CSA rep will manually change the status to Closed. There will be a validation rule to make sure all credit information has been entered.",Plan and manage customer service operations,Manage customer complaints,Manage customer credit,Validate credit
+37,,,,,I would like to be able to handle complaints from my mobile device,"I will know this is complete when I can perform all complaints functionality on a mobile device. Print Complaint and Supplemental Complaint functionality will not be available via mobile device.
+ 
+  Affected Products Mobile Solution:
+  
+  New tab in activity section will be created for mobile use. When the user selects this the Affected Product (Mobile) action they will be taken to a list of the invoice items on the invoice linked to the complaint. The user is able to select one item at a time and populate the same fields they would see if they were using the Affected Products button on the desktop. Those fields include:
+  Selected
+  Item #
+  Product Descriptio
+  Unit Price
+  Quantity Ordered
+  UOM
+  Quantity Affected
+  Mfg Code
+  Quantity to Return
+  Good Material
+  Bad Material Refurbishable Material
+  
+  After entering in the above information, the user will be able to save this record (upon saving the affected product is created). The user will then have the ability to select a different item on the invoice to add as an affected product, or exit and go back to the case",Plan and manage customer service operations,Manage customer complaints,Mobility,Enable mobile access
+38,,,,,"As a XXXX User, I want the Plant and RQM lookup fields to be autopopulated when an invoice is attached to a Complaint, so that roles and responsibility can be determined","I will know this is done when the Plant and RQM fields are populated with the respective information from the Invoice record
+ 
+  When an invoice is attached to a complaint (Case), the associated invoice should have an assigned plant (lookup field on invoice, XXXX10_Plant__c) that should be autopopulated after association. Additionally, the Plant record should have a lookup to the Regional Quality Manager (User, XXXX10_RQM__c) that should cascade to the Complaint record.",Plan and manage customer service operations,Manage customer complaints,Manage invoice,
+39,,,,,"I would like the system to ensure that the value in the ""Complaint Total"" field matches the total of all Allowance Code Value fields, so that I can make sure the value of the credit matches the calculation","I will know this is done when the Allowance Code Sum cannot exceed the Complaint Total amount
+ 
+  Solution: 
+  
+  1. On the Case object, create ""Allowance Code Value Sum"" formula field that is hidden (off the page layout). The field is a sum of fields ""Allowance Code Value 1"", ""Allowance Code Value 2"", ""Allowance Code Value 3"", and ""Allowance Code Value 4"". 
+  2. Create a validation rule which prevents the user from changing the complaint to ""Responded"" if the ""Complaint Total"" field is not equal to the ""Allowance Code Value Sum"" field. This is for Complaint record type only. 
+  Error Message will read: ""Please ensure that the Allowance Code Value Sum is equal to the Complaint Total""
+  Additional Requirement: Allowance Code Values cannot be negative, nor can ""Labor Cost"" or ""Other Cost""",Plan and manage customer service operations,Manage customer complaints,Manage customer credit,Validate credit
+40,,,,,As a Plant Rep or RQM I would like to be able to capture the product code for the items on the complaint so I can report as to which products are having issues,"I will know this is done when the user can select a picklist value for Product Code.
+ 
+  Solution: Create fields ""Product Group"" and ""Product Code"" (in plant details section) and make them picklists. Picklist values and dependencies can be found in the attachment
+  
+  These fields will be added to the validation rule (along with allowance codes and nature codes) that requires entry before moving from status ""Response Reviewed"" to ""Responded""
+  
+  Additionally, these fields should lock when the status = ""Approved,"" or ""Closed"" (System Admin and RQM should be able to edit throughout the process - no locking)",Plan and manage customer service operations,Manage customer complaints,Technical support,
+41,,,,,"I would like certain information to populate based on status updates, or have status changes occur automatically based on specific information entered in the system","I will know this is complete when the appropriate workflows are created
+ 
+  Workflow rules:
+  When the user changes the status to ""Entered and Sent"", the Case Owner field will populate with the Plant queue associated to the Shipping Plant field on the Case. The plant object and queue will be linked by the ""owner"" field.
+ 
+  When the plant user changes the status from ""Entered and Sent"" to ""Response Reviewed"", the Case Owner field should populate with that user.",Plan and manage customer service operations,Manage customer complaints,Manage shipment,
+42,,,,,As a user I would like to be notified regarding the status of credits so I can stay informed as to when the complaint can be closed,"I'll know this is complete when the following notifications are created
+ 
+  Solution:
+ 
+  The sales rep on the complaint should receive a chatter notification when the credit has been issued and the complaint has been closed. This will trigger upon Status = Closed.
+ 
+  The following information will be shown in the chatter notification;
+ 
+  ""A complaint for one of your accounts has been closed""
+ 
+  Case Number (link)
+  
+  Account
+  
+  Contact
+  
+  Credited Amount",Plan and manage customer service operations,Manage customer complaints,Manage customer credit,Validate credit
+44,,,,,"As a user, I would like to be able to route my complaint for approval, so that I can obtain necessary sign off on my complaint and send to the credit team as needed","I will know this is complete when the user is able to send a complaint to the appropriate party and gain stamp of approval so that the complaint can be sent for credit issuance
+  
+  Solution: Use standard ""Submit For Approval"" button on case object.
+
+  Plant Rep: Once the plant rep has moved the complaint to ""Responded"" status, they can then select the standard ""Submit For Approval Button"". If the Complaint Total field on the case is less than $3,000, the plant rep will enter comments in the ""Comments"" field (optional). The complaint status will automatically update from ""Responded"" to ""Approved"" upon selecting submit.
+ 
+  If the plant rep selects submit and the Complaint Total field is greater than $3,000, an email notification will be sent to the RQM on the complaint reading ""A complaint has been sent to you for approval. Please take immediate action to review this complaint"" (Show fields ""Case Number"", ""Account Name"", ""Complaint Total"", ""Subject""). The RQM will go to the approval section on the complaint and will be able to select ""Approve"" or ""Reject"" buttons and enter text in the ""Comments"" field (optional). If the complaint is approved by the RQM, the status will automatically update to ""Approved"". 
+
+  If the complaint is rejected, the complaint will unlock and the plant user will remain the case owner. The case owner will receive a notification stating ""The following complaint {Complaint Number} has been rejected"" (Show fields ""Case Number"", ""Account Name"", ""Complaint Total"", ""Subject"" --- Rejected By: (RQM), Rejection Reason: (Approval Comments)). The status will change from ""Responded"" to ""Response Reviewed"".
+
+  Any offline email approvals from other parties involved (as necessary according to the XXXX bulletin) will be attached in the attachments section of the complaint, but will not be validated in Salesforce.
+
+  The complaint will be locked upon submitting for approval on the complaint
+
+  The complaint must be in the status ""Responded"" before it can be submitted for approval. Error message if user tries to send for approval and the complaint is not in Responded status will read, ""The complaint status must equal ""Responded"" before submitting for approval""
+  
+  
+  
+  A CSR, Sales Rep and Transportation Rep should not be allowed to submit for approval",Plan and manage customer service operations,Manage customer complaints,Manage customer credit,Validate credit
+45,,,,,"Complaint Reporting by Plant - Current DE 102 EXCEL Report and Days to Close / Days to Resolution Report will not be available after Complaint Track Go - Live.
+  
+ This reporting is tied to Manufacturing incentive plans and thus needs replication in the new Complaint Handling Track","Replication of quality reports reports.
+  Solution: Leverage standard Salesforce reports and group various reports within a specific Complaints Reports folders. 
+  DTR/DTC Report will be as follows:
+  
+  Grouping/Filter: Shipping Plant
+  
+  Columns: Complaint Number, Count, DTR, DTC, Time on Hold
+  
+  Total by: DTR average, DTC average, Time on Hold average
+  DE102: To be owned by XXXX
+  Plant Quality Ratings Report will be as follows: To be owned by XXXX",Plan and manage customer service operations,Manage customer complaints,Manage shipment,
+46,,,,,"As a CSR Sales Rep, Plant Rep, RQM or Transportation Rep I would like to be able to Create a new contact for an account after receiving a complaint---so that I can Document who contacted regarding a complaint and who to reach out to for more information if needed","I will know this is done when I am able to create a contact from the Case page Layout (Contact Field quick create)
+  
+  Solution: 
+  
+  Utilize quick create function to provide contact creation function. Additionally, the existing contact record type/page layout will be leveraged as a part of this sprint. 
+
+  Note, all users will have the ability to create Contacts in the system (will not limit the creation process).",Plan and manage customer service operations,Manage customer complaints,Manage account,
+47,,,,,"As a Customer I would like to be able to receive a notification when my complaint is created, so that I know my issue is being worked on","I will know this is done when an email is sent to the customer after the complaint is created
+
+  Solution: Upon creation of a complaint, the system should email the contact associated with the complaint (HTML Template, ""XXXX Logo Letterhead""). The email will read ""Dear {Customer Name}, A complaint has been entered for your account. If necessary, please consult with your XXXX Sales Representative for further information about this complaint"" 
+
+  Complaint Reference Number: 
+  
+  Date Entered: 
+  
+  Complaint Reason:",Plan and manage customer service operations,Manage customer complaints,Create complaint,
+48,,,,,As a CSR Sales Rep Plant Rep RQM Transportation Rep I would like to be able to View customer specific service SLAs---so that I can Resolve a complaint based on customer agreements and expectations,Business Rule:Validation Rule:Data Fields:Automation:Security/Permission:,Plan and manage customer service operations,Manage customer complaints,Manage entitlement,
+49,,,,,As a Sales Rep I would like to be able to Link an opportunity to a complaint---so that when calling an architect I know if there is a complaint associated with the job they are working on,"I will know this is done when I am able to link a Complaint (Case) to an Opportunity record. 
+ 
+  Solution: A custom field will be used to link a Case to an Opportunity. Add the following text fields, Job Name, Job Site Street Address, Job Site State/Prov, Job Site City, Job Site Postal Code, Job Site Contact. See below for mapping of new fields to the opportunity object.
+  
+  Job Name -> Opportunity Name
+  
+  Job Site Street Address -> Street Address
+  
+  Job Site State/Prov -> State/Province
+  
+  Job Site City -> City
+  
+  Job Site Postal Code -> Zip/Postal Code
+ 
+  Validation Rule: If opportunity is selected, job fields above should be populated. If the opportunity is not linked, the user will have the ability to manually enter the job related fields above. If a user manually enters information in these job fields but later links an opportunity, the data will overwrite the manually entered data with the data on the opportunity
+  
+  
+  
+  Security/Permission: All users will be able to link a Complaint (Case) to an Opportunity",Plan and manage customer service operations,Manage customer complaints,Generate opportunity,
+50,,,,,"As a CSR, Sales Rep, Plant Rep, RQM, Transportation Rep I would like to be able to be notified when a complaint has been assigned to me for a certain amount of time with no action---so that I can continue to investigate, update the status, change the owner as necessary","I will know this is complete when the owner of the complaint receives a notification after there has been no activity on their complaint for 48 hours.
+  
+  
+  
+  Solution: Create an escalation rule after no activity on a complaint that sends an email to the user in the Owner field stating, ""A complaint assigned to you has been inactive for 2 days. Please take the appropriate actions to resolve this complaint"". 
+  
+  
+  
+  Utilizing the last modified date, a notification would be sent to the Case owner if 48 hours have passed with no activity 
+  
+  Omit: On Hold, Approved, and Closed statuses",Plan and manage customer service operations,Manage customer service workforce,Manage performance,
+51,,,,,"I would like to be notified based on certain milestone of a complaint---so that I can investigate as needed and assist with the resolution, and/or be informed in case I have interaction with the customer.","I will know this is complete when a notification is sent to the corresponding user based on a certain set of criteria
+ Solution: 
+  
+  1. When a complaint is assigned to a queue (Case Owner field changed to Plant (one of the many), CSR or Transportation queue), that queue will receive a chatter notification stating, ""A complaint has been assigned to [Queue Name], please respond accordingly. 
+ 
+  Additional Case information can be found below:
+  
+  -Case Number:
+  
+  -Account Name:
+  
+  -Contact:
+  
+  -Case Reason:
+ 
+  2. When a complaint is created, send a chatter notification to the ""Sales Representative"" stating, ""A complaint has been created for [Account Name]. Please review the case at your convenience.
+ 
+  Additional Case information can be found below:
+  
+  -Case Number:
+  
+  -Account Name:
+  
+  -Contact:
+  
+  -Case Reason:""
+  
+  
+  
+  3. When a complaint's status is changed to closed, send a Chatter notification to the ""Sales Representative"" stating, ""A complaint has been closed for [Account Name].
+  
+  
+  
+  Additional Case information can be found below:
+  
+  -Case Number:
+  
+  -Account Name:
+  
+  -Contact:
+  
+  -Case Reason:
+  
+  """,Plan and manage customer service operations,Manage customer complaints,Complaint process control,
+52,,,,,"As a CSR Sales Rep Plant Rep RQM Transportation Rep I would like to be able to create a complaint from an invoice, so that the invoice related details autopopulate","I will know this is complete when I am able to create a new complaint directly from an invoice, and the invoice related details auto populate on the complaint.
+ 
+  Solution:
+  
+  Add Case as a related object to Invoice, and add ""New"" button on the related object
+ 
+  Upon clicking ""New"" and selecting the complaint record type, the fields ""Invoice #"", ""Shipping Plant"", ""RQM"" should be populated on the complaint creation page. Once saved and moved to ""Entered"" status, and upon clicking the Affected Products button, the user should see the list of line items to select from",Plan and manage customer service operations,Manage customer complaints,Create complaint,
+53,,,,,As a user I would like to be able to send approved complaints to the XXX team so that they can issue a credit to the customer,"I will know this is complete when appropriate XXX users receive an email to a daily report with approved complaints that are ready for credit memos
+ 
+  Solution: Create a report with the following information:
+  
+  Filter: Status = Approved
+  
+  Columns: Complaint Number, Account, Contact, Invoice Number, Complaint Value, Allowance Code 1, Allowance Code Value 1. Allowance Code 2, Allowance Code Value 2
+ 
+  This report will be sent to specific users (not yet identified) on a daily basis. This does not need to be tested at the moment.",Plan and manage customer service operations,Manage customer complaints,Manage customer credit,Issue credit
+54,,,,,"Plant Rep, RQM I would like to be able to select/capture the nature codes on a complaint---so that I can document the root cause of the complaint for reporting and tracking purposes","I will know this is done when various fields are available for nature code classification (Nature Code, Nature Code Sub-Category, Nature Code Sub-Category Details)
+ 
+  Field Dependencies: The user must select a Business Unit before the system allows them to select a Nature Code Category (the business unit value selected determines the picklist for the nature code category values). The user must select a Nature Code Category before the system allows them to select a nature code sub-category. (the nature code category value selected determines the picklist for the nature code sub-category)
+ 
+  Data Fields: Business Unit, Nature Code Category, Nature Code Sub-Category, Nature Code Sub-Category Detail. (see attachment for details)",Plan and manage customer service operations,Manage customer complaints,Technical support,
+55,,,,,"As a CSR, Sales Rep, Plant Rep, RQM or Transportation Rep I would like to be able to Capture/update the status of a complaint---so that I can Track the progress of a complaint","I will know this is done when complaint specific status values are available on the Case (Complaint) record.
+  Data Fields: status: picklist values include ""Entered"", ""Entered and Sent"", ""Response Reviewed"", ""Responded"", ""Approved"", ""Closed"", ""On Hold"".",Plan and manage customer service operations,Manage customer complaints,Track updates,
+56,,,,,"As a CSR Sales Rep Plant Rep RQM Transportation Rep I would like to be able to Create a Complaint Response from a customer, investigator, plant, RQM, and/or transportation---so that I can Document my assessment of / response to a complaint","I will know this is done when complaint responses can be captured for internal and external parties. 
+ 
+  Solution: The following fields need to be created: Case Number, Response Type (Picklist: Customer Statement, Investigator Statement, Plant Answer, Transportation Answer, Customer Service Answer), Description (long text), Response Status (Draft, Published). Once a response is published it is no longer available for editing. System should also track the user who entered the response with an ""Owner"" field. Only 1 customer statement and investigator statement are allowed. Multiple Plant, Transportation and Customer Service Answers are allowed. 
+ 
+  Validation: Response Type, Description, Response Status are required
+ 
+  Security/Permission: The following complaint responses can be created by the following profiles
+ 
+  Customer Statement: All users can create
+  
+  Investigator Statement: All users can create
+  
+  Plant Answer: Plant and RQM users can create
+  
+  CSR Answer: CSR and RQM users can create
+  
+  Transportation Answer: Transportation and RQM users can create",Plan and manage customer service operations,Manage customer complaints,Manage complaint response,
+57,,,,,As a RQM I would like to be able to Delete a complaint (Permission Set - who can do this?)---so that I can Remove a complaint from the system that was inaccurate or created by mistake,"I will know this is done when users with the assigned permission set have the ability to delete Case records. 
+  
+  
+  
+  Solution: Permission set will be utilized to provide individual users the ability to delete Case records.",Plan and manage customer service operations,Manage customer complaints,Close complaint,
+58,,,,,"As a CSR, Sales Rep, Plant Rep, Transportation Rep, I would like to be able to Create a supplemental complaint--- so that I can link a new complaint with additional information to a current closed complaint in the system. (i.e. a complaint was closed because awaiting customer/{color:#d04437}contractor {color}information for certain period of time, then a supplemental case was created once the information came in)","I will know this is done when I have the ability to create a related case from a Complaint Case record. 
+ 
+  Solution: 
+  
+  A lightning button has been added to the layout that will create a related ""Complaint"" case upon selection (same fields and information as the parent/primary case). The following fields will be autopopulated:
+  
+  1. Account Name = Same as parent case
+  
+  2. Contact Name = Same as parent case
+  
+  3. Case Record Type = Complaint
+  
+  4. Status = Entered
+ 
+  Security: All users will be able to create a supplemental complaint case at any point in the case process/workflow (no limitations around creation)",Plan and manage customer service operations,Manage customer complaints,Create complaint,
+59,,,,,As a Customer CSR Sales Rep Plant Rep RQM Transportation Rep I would like to be able to Search for and view Knowledge articles based on title/content---so that I can Find information that may help me resolve my complaints more quickly and effectively,"Business Rule:Validation Rule:Data Fields:Automation:Security/Permission:
+  
+  
+  
+  Solution: 
+  
+  Ensure the knowledge Component is added to the Case Lightning Record page to facilitate resolution. 
+  
+  Note, this should only be done if a formal governance process is formalized.",Plan and manage customer service operations,Manage customer complaints,Knowledge management,Access knowledge
+60,,,,,"As a CSR Sales Rep Plant Rep RQM Transportation Rep I would like to be able to Create a Knowledge Article - Quality FAQ, Information, Training---so that I can Help others more effectively resolve complaints",Business Rule:Validation Rule:Data Fields:Automation:Security/Permission:,Plan and manage customer service operations,Manage customer complaints,Knowledge management,Create knowledge
+61,,,,,As a CSR Sales Rep Plant Rep RQM Transportation Rep I would like to be able to Print complaint information and details from the system---so that I can See all of the data I need clearly in my print out,"A button should be available from the Case layout that produces a PDF of Case details that can be printed. The following information should be available:
+  
+  COMPLAINT DETAILS
+  Case Number
+  Case Owner
+  Account Name
+  Contact Name
+  Sales Representative
+  Created By
+  Status 
+  Case Origin
+  On Hold Reason
+  
+  STATUS TRANSITION 
+  Entered (Date and User)
+  Entered and Sent (Date and User)
+  Response Reviewed (Date and User)
+  Responded (Date and User)
+  Approved (Date and User)
+  Closed (Date and User)
+  
+  INVOICE DETAILS
+  Invoice #
+  Shipping Plant
+  RQM
+  Carrier
+  Ship To Number
+  Ship To Name
+  Ship To Address
+  Bill To Number
+  Bill To Name
+  Bill To Address
+  
+  AFFECTED PRODUCTS (display following fields for each affected product)
+  Item #
+  Product Description
+  Unit Price
+  Quantity Ordered
+  UOM
+  Mfg Code
+  Quantity Affected
+  Good Material
+  Bad Material
+  Refurbishable Material
+  
+  COMPLAINT VALUE
+  Material Cost 
+  Labor Cost
+  Other Cost 
+  Inbound Freight Amount
+  Complaint Total
+  
+  NATURE CODES
+  Product Group
+  Product Code
+  Business Unit
+  Nature Code Category
+  Nature Code Sub-Category
+  Nature Code Sub-Category Detail
+  
+  ALLOWANCE CODES
+  Allowance Code 1
+  Allowance Code 1 Amount
+  (more if applicable)
+  Allowance Code Sum
+  
+  JOB SITE DETAILS
+  Job Name
+  Job Site Street Address
+  Job Site State/Prov
+  Job Site City
+  Job Site Postal Code
+  Contractor
+  
+  SAMPLE INFORMATION
+  Sample Sent Date
+  Sample Received Date
+  Sent To
+  Attention Of
+  
+  RETURN MATERIAL INFORMATION
+  Carrier
+  Date Received
+  Shipping Paid By
+  Restocking Fee
+  
+  CREDIT INFORMATION
+  Credit Issued
+  Claim Number
+  Credit Date
+  Entered By
+  Customer Credit Amount
+  Accounting Comments
+  
+  
+  COMPLAINT RESPONSES (show fields for each complaint response)
+  Response Type
+  Description
+  Created By
+  
+  APPROVAL INFORMATION
+  Approved By
+  Approved Date
+  Approval Comments",Plan and manage customer service operations,Manage customer complaints,Complaint print & export,Print complaint
+62,,,,,"As a CSR, Sales Rep, Plant Rep, RQM, or Transportation Rep I would like to be able to log activities associated with a complaint---so that I can track any important milestones or activities such as an update in status or important contact with the customer","I Will know this is done when I can Log a Call, Send an Email, Log a Task and Log an Event on a Case record
+ 
+  Business Rule: User can log calls with the customer, visits to customer warehouse/site, ...
+ 
+  Security/Permission: CSR, Sales Rep, Plant Rep, RQM, or Transportation Rep should be able to View activities related to a complaint",Plan and manage customer service operations,Manage customer complaints,Track updates,
+63,,,,,As a CSR Sales Rep Plant Rep RQM Transportation Rep I would like the system to automatically send a notification to the RQM associated with the complaint if the value of the complaint exceeds a certain threshold,"I will know this is done when the assigned RQM is notified (using chatter) when a complaint is logged that exceeds $3,000. 
+  
+  Business Rule: Automatic escalation to RQM if credit goes above $3,000
+ 
+  Automation:
+ 
+  Solution: Process Builder: Post a chatter message and tag the RQM identified in the RQM field when the value of the complaint (Complaint Total field referenced in story 41) is greater than or equal to $3,000. The following message should be displayed. 
+  
+  ""A high value complaint has been created. Please review the details at your convenience and respond accordingly.""",Plan and manage customer service operations,Manage customer complaints,Complaint process control,
+64,,,,,"As a CSR, Sales Rep, Plant Rep, RQM, or Transportation Rep I would like to be able to Collaborate with others from within the system---so that I can Initiate communication with other XXX users regarding complaint related information, and thus more quickly and accurately resolve a complaint","I will know this is done when chatter is available on the page layout/lightning record Case page
+  
+  Assumption: User email internally from XXX and use chatter messages",Plan and manage customer service operations,Manage customer complaints,Collaboration,
+65,,,,,As a CSR Sales Rep Plant Rep RQM Transportation Rep I would like to be able to Route a complaint to an internal user---so that I can Assign ownership to the right person/queue that can resolve the complaint or perform the next steps,"I will know this is done when the case can be routed to the appropriate queue or user based on the complaint needs (manual selection by the case owner). 
+  
+  Solution: 
+  
+  When a Case is created, the owner will remain as the person who entered the complaint until manually routed. 
+ 
+  Also, we need to populate the ""Sales Representative"" field upon creation, which is the Account Owner tied to the customer account on the case (this value will not change throughout the duration of the Case lifecycle). 
+ 
+  The following plant and transportation queues need to be created: (please see attachments) 
+  
+  Also, create groups for each of the queues in the attachment and ensure the queue assignment is aligned to the group.",Plan and manage customer service operations,Manage customer complaints,Complaint process control,
+67,,,,,"As a CSR, Sales Rep, Plant Rep, RQM, or Transportation Rep I would like to be able to Track if any samples have been sent by the customer---so that I can See the damage or issue first hand to make a better assessment of the complaint and resolve as appropriate","I will know this is done when sample details can be entered on a complaint (case) record
+ 
+  Solution
+  
+  Add the following fields to the Complaint Layout (New Section):
+  
+  Data Fields: Sample Sent? (Yes/No), Sample Sent Date, Sample Received Date, Sent To (Lookup Plant Object), Attention Of (Text), Sent Via (picklist - Standard Mail, Standard UPS, 2 Day UPS, Overnight, Hand Carried, Other)
+ 
+  Security/Permission: All users will have the ability to enter sample details",Plan and manage customer service operations,Manage customer complaints,Technical support,
+68,,,,,As a CSR Sales Rep Plant Rep RQM I would like to be able to View and select product and quantity on an order for a complaint---so that I can Accurately capture the product and it's attributes on a complaint,"I will know this is done when I can log a complaint that references one or many invoice line items, the user can select specific items and quantities that were affected, and the systems calculates a summary of the total complaint cost. 
+ 
+  Solution: 
+  
+  Create a new object titled: Affected Products
+ 
+  The following fields should be created: Case (Master-Detail), Product Code (Text), Product (Lookup, CC_Product), Invoice Line (Lookup, CC_Invoice_Detail), Quantity Affected (Number), Unit Price (Currency), Sales Amount (Currency), Shipping Quantity (Number)
+ 
+  Add a formula field tiled ""Material Cost"" that multiplies the Quantity Affected*Unit Price (Note, this will be rolled up to the Case header record)
+ 
+  Validation Rule: Quantity Affected cannot be greater than Quantity Ordered. Additionally, if the user confirms a certain quantity of affected product, and then proceeds to click the add products button again, the original affected quantity selected the first time will repopulate for the user to adjust
+ 
+  A new Record Type and Page Layout should be created titled: Affected Product
+  
+  Create a Lightning Record page 
+ 
+  Note, this object will be reference through a lightning component to add/remove line items.",Plan and manage customer service operations,Manage customer complaints,Sales support,
+69,,,,,"As a CSR, Sales Rep, Plant Rep, RQM or Transportation rep I would like to be able to create a complaint received via different channels (phone, email) and enter relevant complaint information---so that I can document the relevant information from the customer to log a complaint on their behalf","Business Rules: 
+ 
+  Data Fields: See Attachment (website URL)
+ 
+  Validation Rules: See Attachment above for required fields in red. A new complaint will default to status ""Entered"". The Case Owner field defaults to user entering the complaint. 
+ 
+  Nature code sub-category and description cannot be entered until Nature Code Category field is filled out. 
+  
+  Automation: System will autopopulate customer contact field if creating a complaint from the contact record. The complaint owner will stay as the creator of the complaint until routed to the plant or necessary party. 
+  
+  Subject field will concatenate with contact name and case reason fields - only when empty upon save. 
+  
+  Security/Permission: A CSR, Sales Rep, Plant Rep, RQM, or transportation rep user can create a complaint",Plan and manage customer service operations,Manage customer complaints,Create complaint,
+70,,,,,"As a CSR, Sales Rep, Plant Rep, RQM or Transportation Rep I would like to be able to Search for a customer contact---so that I can Track the customer involved in the complaint so I know who to contact with questions or updates","I will know this is done when the Account Name field is autopopulated when a Contact Name is manually selected by the user (and the Account field is left blank) for a case record. Additionally, if the user does manually enter an Account Name, it will not be overwritten based on the Contact Name selected.
+  
+  Automation: Once I select the Contact Name (and leave the Account Name field blank), the system should autopopulate the Account Name upon creation of the complaint.
+  
+  Solution: A process builder that executes when the Case record is saved and the contact field populated while the account field is blank. 
+  
+  Process builder name: ""Update Account Base on Contact_Complaints ""
+  
+  Assumption: It applies only for creation of a Case. Any future updates to the Contact's Account change will not be updated on Complaint case.",Measure and evaluate customer satisfaction,Measure customer satisfaction level,Customer feedback,
+72,,,,,We need to be able to group case frequency by volume for a particular brand or channel on the Shipment Volume reports,,Plan and manage customer service operations,Manage customer service requests/inquiries,Manage shipment,Manage shipment by brand
+77,,,,,"Food service users need to be able to create plant cases manually. Users will manually relate Food Service cases to the Plant Case.
+  
+  Add 'Distribution Channel' picklist field to Plant Case with the following values:
+  
+  Retai
+  
+  Food Service",,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case ,Manually create case
+79,,,,,"The customer care team would like a report that provides social case response time . They would like it to report response time from the time it is added to the queue to agent response. Also, they would like it to also be segregated by sentiment (negative/positive). They provided their current SLA matrix for consideration.",,Plan and manage customer service operations,Manage customer service workforce,Manage performance,
+80,,,,,"As any Service User, I want the Case status to systematically update to Open Survey when there is any incomplete survey related to the record and, conversely, I want the Case Status to systematically update to In Progress once all incomplete surveys are completed.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Change case status
+81,,,,,"As a Reporting User, I want to see a Plant case systematically created and a notification e-mail sent to members of the Plant Case Queue when the criteria in the Plant_Case_Creation_Criteria.xlsx are met
+  
+  Page layout on Plant::
+  
+  Record type: Plant Issue Record type
+  
+  Status: Same as Consumer Case
+  
+  Related list: Impacted Cases",,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case ,Systematically create case
+82,,,,,"When someone replies to the specific case email, the case itself state should be changed to 'Review Reply'.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Change case status
+83,,,,,"If a new social post, from the same social persona, is associated to a closed case, the case is
+  reopened. There will not be a limit on am out of days on reopening a case.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case ,Reopen case
+84,,,,,"As a(n) Any Supervisor, I want to view a report showing Cases that are open for more than two business days -- so that we can prioritize effectively",,Plan and manage customer service operations,Manage customer service workforce,Manage performance,Notify on idle cases
+85,,,,,"As a(n) Any Supervisor, I want to view a report showing Cases that are open for more than one business day -- so that we can prioritize effectively",,Plan and manage customer service operations,Manage customer service workforce,Manage performance,Notify on idle cases
+86,,,,,We will need a monthly social case report that reports on the amount of social cases that were responded to that were considered inorganic brand praise because they were respoonding to a marketing post or paid media ad.,,Plan and manage customer service operations,Manage customer service requests/inquiries,Case analysis,
+87,,,,,Create a monthly report for social cases that speak to organic praise of the XXX Brand.,,Plan and manage customer service operations,Manage customer service requests/inquiries,Case analysis,
+88,,,,,"As a Reporting User, I want to view Survey cases that are related to Cases so that I have visibility into questions targeted for specific issues",,Measure and evaluate customer satisfaction,Measure customer satisfaction level,View survey,View survey
+89,,,,,"As a\(n) Business Admin, I want to schedule reports that include any attribute captured on a case to refresh so they are accessible in Salesforce and/or sent to a Distribution List (DL) or group of individual people -- so that XXX company has real-time line of sight into our operations",,Plan and manage customer service operations,Manage customer service requests/inquiries,Ensure client visibility,Ensure client real-time data visibility
+90,,,,,"As a\(n) Any Service User, I want to view open cases by agent so that we are aware of problem areas",,Plan and manage customer service operations,Manage customer complaints,View complaint,View complaint by agent
+91,,,,,"As a Regulatory group member,  I want to be notified of cases that have my respective Risk selected.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Regulatory control,
+92,,,,,"As a Media group member, I want to be notified of cases that have my respective Risk selected.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Media control,
+93,,,,,"As a Security Group member, I want to be notified of cases that have my respective Risk selected.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Security control,
+94,,,,,"for corrective action investigations, automatically pull an emailed plant investigation response into system and link to the case (or allow plant access to directly upload response into case).",,Plan and manage customer service operations,Manage customer complaints,Enrich reference data,Attach supplements to complaints
+95,,,,,"As a member of the food safety alert group, I want to be notified when there are two or more cases of the same UPC, subject code, and julian date.",,Plan and manage customer service operations,Manage customer complaints,Quality control,Quality monitoring
+96,,,,,"When the agent indicates on the case pics are requested, assign the case to the T3 CAG queue and update the status to reflect that we are 'Awaiting Response'
+",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Assign case
+97,,,,,"When we receive a reply from the consumer via e-mail, update the status of the case to 'Review Reply'",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Change case status
+98,,,,,"When case updates with new or pertinent information (digital pic, lab findings) responsible rep is notified.",,Plan and manage customer service operations,Manage customer service workforce,Manage performance,Supervise personnel performance
+99,,,,,"Case Overdue notifications, formerly known as chasing notifications, notify the case owner and an e-mail distribution list until a reply is received and the determine the frequency of the timing of the notification based on contact criteria",,Plan and manage customer service operations,Manage customer service workforce,Manage performance,Notify on idle cases
+101,,,,,create queues to put cases in to the worker.,,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Assign case
+102,,,,,Time/date stamp tracked and displayed on cases to track updates and by whom,,Plan and manage customer service operations,Manage customer service requests/inquiries,Track update history,Track update time & editor
+104,,,,,"As a\(n) Any Service User, I want to the origin type of the case to by systematically populated based on the contact channel -- so that case orgin can be reported with accuracy",,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case ,Manage case origin
+105,,,,,"As a\(n) , I want to send cases to internal/external third party for review and added notes -- so that",,Plan and manage customer service operations,Manage customer service requests/inquiries,Collaboration,Initiate collaboration
+107,,,,,"As a\(n) Manager, I want to report on total Case count by multiple hierarchy levels-by brand, product group, individual SKU -- so that we have visiblity into complaint frequency",,Plan and manage customer service operations,Manage customer complaints,Quality control,Quality monitoring
+108,,,,,"As a\(n) Any Service User, I want to close a case -- so that indicate a case has been resolved",,Plan and manage customer service operations,Manage customer service requests/inquiries,Close case,Close resolved case
+109,,,,,The ability for the consumer affairs representative to see in a social case that they can offer the customer a coupon (this is the mailed out coupon option).,,Plan and manage customer service operations,Manage customer service requests/inquiries,Enhance customer satisfaction level,Provide customer benefit
+111,,,,,"Service Cloud able to identify that a social case opened by same persona has been previously opened via email/o phone inquiry and merge the cases. We did discuss that Twitter does not require name so some individuals add a pseudo name, so will not be able to match in those cases.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case ,Duplication check & merge case
+112,,,,,Consumer affairs team would like to see what brand the social case is associated with when they click on the case in the queue.,,Plan and manage customer service operations,Manage customer service requests/inquiries,View case,View case details
+113,,,,,"The consumer affairs team will need to be notified in a timely manner (once escalated case hits the service cloud queue) of escalated cases (will be placed in escalated queue via escalated key words, attached file). They are currently being notified of these escalated cases via email.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Case escalation
+114,,,,,The consumer affairs team would like the ability to reply to social cases via mobile device.,,Plan and manage customer service operations,Manage customer service requests/inquiries,Mobility,Enable mobile access
+115,,,,,"I want to ensure the connection between Social Studio and Service Cloud is in sync once Social Customer Service is setup. Want to be able to show transparency between both platforms, for example able to display case number within Social Studio for posts routed to Service Cloud.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Collect feedback & request through channels,Collect feedback & request through channels
+116,,,,,"As a\(n) Any Service User, I want to capture the Plant Number on a Case record or provide the Plant Number aligned Est # if the Plant Number is not listed on the package -- so that we maintain high data integrity",,Plan and manage customer service operations,Manage customer service requests/inquiries,Manage plant,Access plant-related information
+117,,,,,"As a\(n) Any Service User, I want to easily access knowledge base articles related to the product or subject of a case -- so that I can efficiently provide service",,Plan and manage customer service operations,Manage customer service requests/inquiries,Knowledge management,Access knowledge
+118,,,,,"As a\(n) Any Service User, I want to receive a screen pop of the existing case when a call is transferred to me by a fellow Agent -- so that we can provide continuity of Service",,Plan and manage customer service operations,Manage customer service requests/inquiries,Enhance customer satisfaction level,Provide continuity of service
+119,,,,,"As a\(n) Any Service User, I want to have case data (such as product description) get pulled into letters (letter inserts). -- so that letters are accurate and personalized",,Plan and manage customer service operations,Manage customer service requests/inquiries,Case print & export,Export case
+120,,,,,"As a\(n) Any Service User, I want to receive letter suggestions based on Case subject codes -- so that case handling is more efficient",,Plan and manage customer service operations,Manage customer service requests/inquiries,Knowledge management,Access knowledge
+122,,,,,"As a\(n) Any Service User, I want to view caller history within case -- so that I have communications context",,Plan and manage customer service operations,Manage customer service requests/inquiries,View case,View case details
+125,,,,,"As a\(n) Service Manager, I want to track the total time between when an Agent is assigned a case (or assigns a Case to themselves) to when the Case status is updated to closed *or* to when the Case is transferred out of their queue -- so that we can measure agent performance.
+ 
+  Measure in minutes with this format: XX.X
+ 
+  Track this duration on the related Activity record.",,Plan and manage customer service operations,Manage customer service workforce,Manage performance,Supervise personnel performance
+126,,,,,"As a\(n) Service Manager, I want to track the total time between case created and case closed -- so that we can proactively provide assistance",,Plan and manage customer service operations,Manage customer service workforce,Manage performance,Supervise personnel performance
+127,,,,,"As a\(n) Any Service User, I want to capture multiple notes to a Case with related date stamp and Agent name -- so that case history is tracked efficiently",,Plan and manage customer service operations,Manage customer service requests/inquiries,Track update history,Track update time & editor
+128,,,,,"As a\(n) Any Service User, I want to search for previous calls / cases by consumer info or case # -- so that I can find previous Consumer records efficiently",,Plan and manage customer service operations,Manage customer service requests/inquiries,Search case,Search case by existing information
+129,,,,,"As a\(n) Any Service User, I want to transfer the ownership of a case that I own to the responsible rep as its escalated -- so that cases can be reported on accurately",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Assign case
+130,,,,,"As a\(n) Any Service User, I want to capture multiple issues for a Case aligned to a single product -- so that issues can efficiently reported on",,Plan and manage customer service operations,Manage customer complaints,Quality control,Quality monitoring
+131,,,,,"As a\(n) Any Service User, I want to put a case in follow-up status while researching issue -- so that I am aware of cases that are pending resolution",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Change case status
+132,,,,,"As a\(n) Business Admin, I want to import Cases into Salesforce from a formatted file -- so that store reports can be worked through by Agents",,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case ,Manually create case
+135,,,,,"As a\(n) Any Service User, I want to view the details of cases submitted by Consumers online \-\- so that cases from online users can be managed and resolved
+ 
+  1. Web form fields map to Case (Record type: Consumer Web)
+  
+  2. Case generated in Salesforce and assigned to Web Queue
+  
+  3. Agent selects an open case and assigns to self for handling
+  
+  4. Agent reviews un-mapped lookup fields (UPC, Contact, etc.) and creates relationships
+  
+  5. Agent handles case as normal",,Plan and manage customer service operations,Manage customer service requests/inquiries,View case,View case details
+136,,,,,"As a\(n) Any Service User, I want to attach digital pictures to a case \-\- so that there is photographic context to a case",,Plan and manage customer service operations,Manage customer service requests/inquiries,Enrich reference data,Attach supplements to cases
+137,,,,,"As a\(n) Any Service User, I want to transfer cases to the queue and as a user assigned to a queue, I want to pull cases out of the related (ingredient inquiry, escalated, lab, claims, etc.) -- so that cases can be handled efficiently and by the right people
+  
+  Design: captured on the Queues / Groups tab in the Service data dictionary.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Assign case
+138,,,,,"As a Service User, I want to to see 'prep stages' for an incoming contact via email/chat/text with predetermined fields that would fill in on the case based off what the consumer enters in the contact us portion. ‚Äì so that cases can be handled efficiently",,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case ,Create case with collected feedback & request
+139,,,,,"As a\(n) Any Service User, I want to quickly pivot between Case and Contact records so that I can refer to caller information during the interaction",,Plan and manage customer service operations,Manage customer service requests/inquiries,View related contacts,View related contacts
+141,,,,,"As a\(n) Any Service User, I want to Sections of the case with read only access vs edit abilities based off users security level \-\- so that sensitive data is protected",,Plan and manage customer service operations,Manage customer service requests/inquiries,Security control,Authorization control
+142,,,,,"As a\(n) Any Service User, I want to use free form case fields (mfg code, store address, etc.) \-\- so that relevant information can be captured",,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case ,
+143,,,,,"As a\(n) Any Service User, I want to see a drop down/wildcard search for specific case fields (UPC, Subject code, Subject code detail, store) -- so that relevant records can be found quickly",,Plan and manage customer service operations,Manage customer service requests/inquiries,View case,View case details
+144,,,,,"As a\(n) Any Service User, I want to capture at least 110 fields on a case (fully reportable) \-\- so that we can capture adequate detail around the case",,Plan and manage customer service operations,Manage customer service requests/inquiries,View case,View case details
+145,,,,,"As a\(n) Any Service User, I want to relate a Case to a Product \-\- so that XXX can report on case volume for each product",,Plan and manage customer service operations,Manage customer service requests/inquiries,Case analysis,Analyze by product
+146,,,,,"As a\(n) Any Service User, I want to attach a Call to a Case \-\- so that call history can be created on a case",,Plan and manage customer service operations,Manage customer service requests/inquiries,Enrich reference data,Attach supplements to cases
+147,,,,,"As a\(n) Any Service User, I want to capture Tasks on a case \-\- so that actions can be assigned for follow-up",,Plan and manage customer service operations,Manage customer service requests/inquiries,Manage case task,Capture task
+148,,,,,"As a\(n) Any Service User, I want to capture Comments on a case \-\- so that more detail on a case can be captured",,Plan and manage customer service operations,Manage customer service requests/inquiries,Collaboration,
+149,,,,,"As a\(n) Any Service User, I want to be systematically assigned cases based on a set of criteria \-\- so that cases are routed efficiently and accurately",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Assign case
+150,,,,,"As a\(n) Any Service User, I want to ensure that Cases are validated based on criteria \-\- so that I can maintain data integrity / quality",,Plan and manage customer service operations,Manage customer service requests/inquiries,Validate case,Validate case base on certain criteria
+151,,,,,"As a\(n) Any Service User, I want to capture case category and case subject detail on a case \-\- so that XXX can report on the types of cases that are being handled",,Plan and manage customer service operations,Manage customer service requests/inquiries,View case,View case details
+152,,,,,"As a\(n) Any Service User, I want to capture issue codes and sub-codes on a case \-\- so that XXX can report on the types of cases that are being handled",,Plan and manage customer service operations,Manage customer service requests/inquiries,View case,View case details
+153,,,,,"As a\(n) Any Service User, I want to have systematically escalated to a 'Second Escalation' after they have been open for 2 business day \-\- so that cases that have been open for a longer duration can be prioritized",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Case escalation
+154,,,,,"As a( n ) Any Service User, I want to systematically escalate cases so that older cases can be prioritized",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Case escalation
+155,,,,,"As Any User, I want to assign cases to queues so that cases can be handled efficiently
+  
+  PFA the list of queues created as part of this story.",,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control,Assign case

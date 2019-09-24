@@ -5,7 +5,7 @@ import os
 CURR_PATH = os.path.dirname(__file__)
 TAG_PATH = os.path.dirname(CURR_PATH) #获得d所在的目录,即d的父级目录
 
-tag = 'Capability'
+tag = 'Sub-Capability'
 
 def get_tagsystem():
     print(TAG_PATH)
@@ -23,7 +23,7 @@ def training_model():
     #result = model.test("C:/Users/lbao009/Documents/testing_data.txt")
 
 def predict(userstory):
-    model_file = TAG_PATH + '/Model/model_Capability.bin'
+    model_file = TAG_PATH + '../Model/model_Capability.bin'
     if not os.path.exists(model_file):
         training_model()
     df_tags = get_tagsystem()

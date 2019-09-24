@@ -1,0 +1,131 @@
+__label__0	Transportation Rep like be change status Responded allowance code is submit approval is transportation related complaint 
+__label__0	like see shipping quantity UOM adding products product button visibility 
+__label__0	like see Invoice record is invoice credit memo debit memo do create complaint credit memo debit memo 
+__label__0	RQM like access approval button complaint is 
+__label__0	like see case number case link escalation email have complaint has been touched hours 
+__label__0	like be close cancel complaint entered error having validation rules do have add details do have closing complaint 
+__label__0	like plant dashboard display information related shipping plant do need go report filter plant 
+__label__0	Add fields invoice integration layout including Shipment ID Oracle Order Number Order Control 
+__label__0	like Sales Representative field case be populated complaint account owner account Account Name field account owner contact 
+__label__0	like see dropdown queues plant CSR transportation queues changing owner complaint find queue remember name 
+__label__0	plant rep select material complaint have send approval is 
+__label__0	transportation rep allowance code complaint is like be change status responded submit complaint approval sending plant 
+__label__0	like track amount time complaint spends transportation CSR queue does impact plant DTR DTC 
+__label__0	like view product case based product selected complaint 
+__label__1	Sales Rep like receive notification complaint has been closed cancelled contact customer 
+__label__0	like owner complaint update Sales Representative complaint complaint is closed 
+__label__0	like be calculate amount complaint credit team issue credit 
+__label__0	user selects allowance code user has ensure is value Material field product accounting document credit 
+__label__0	like ensure advance status Published complaint response 
+__label__0	like support email case functionality expedite creation cases 
+__label__0	like plant reps be prevented moving status Responded code complaint CSR Transportation Issue do have CSR Transportation Response added 
+__label__0	like be take complaint Off Hold return status continue working complaint 
+__label__0	like be link Project Record Salesforce pull job information complaint 
+__label__0	user need ability see credit associated Complaint case view details credit 
+__label__0	like be close cancel complaint record close complaint having enter information 
+__label__0	like be document cost freight returned material impact complaint total 
+__label__0	like user be progress statuses be go statuses permitted business rules user change status resolve complaint 
+__label__0	like be apply restocking fee returned material update complaint total account fee 
+__label__0	like be route complaint CSR team track CSR issues have team sign reason complaint 
+__label__0	user like be close complaint lock information track days closure 
+__label__0	like be handle complaints device 
+__label__0	XXXX User want Plant RQM lookup fields be autopopulated invoice is attached Complaint roles responsibility be determined 
+__label__0	like system ensure value Complaint Total field matches total Allowance Code Value fields make value credit matches calculation 
+__label__0	Plant Rep RQM like be capture product code items complaint report products are having issues 
+__label__0	like information populate based status updates have status changes occur based information entered system 
+__label__0	user like be notified regarding status credits stay informed complaint be closed 
+__label__0	user like be route complaint approval obtain sign complaint send credit team needed 
+__label__0	Complaint Reporting Plant Current DE EXCEL Report Days Close Days Resolution Report be Complaint Track Go Live reporting is tied Manufacturing incentive plans needs replication Complaint Handling Track 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be Create contact account receiving complaint Document contacted regarding complaint reach information needed 
+__label__0	Customer like be receive notification complaint is created know issue is being worked 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be View customer service SLAs Resolve complaint based customer agreements expectations 
+__label__0	Sales Rep like be Link opportunity complaint calling architect know is complaint associated job are working 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be be notified complaint has been assigned amount time action continue investigate update status change owner 
+__label__0	like be notified based milestone complaint investigate needed resolution be informed case have interaction customer 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be create complaint invoice invoice related details autopopulate 
+__label__0	user like be send complaints XXX team issue credit customer 
+__label__0	Plant Rep RQM like be select capture nature codes complaint document root cause complaint reporting tracking purposes 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be Capture update status complaint Track progress complaint 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be Create Complaint Response customer investigator plant RQM transportation Document assessment response complaint 
+__label__0	RQM like be Delete complaint Permission Set do Remove complaint system was created mistake 
+__label__0	CSR Sales Rep Plant Rep Transportation Rep like be Create complaint link complaint information complaint system i.e complaint was closed awaiting customer color d04437 contractor color information period time case was created information came 
+__label__0	Customer CSR Sales Rep Plant Rep RQM Transportation Rep like be Search view Knowledge articles based title content Find information help resolve complaints 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be Create Knowledge Article Quality FAQ Information Training Help others resolve complaints 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be Print complaint information details system See data need print 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be log activities associated complaint track milestones activities update status contact customer 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like system send notification RQM associated complaint value complaint exceeds threshold 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be Collaborate others system Initiate communication XXX users regarding complaint related information resolve complaint 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be Route complaint user Assign ownership person resolve complaint perform steps 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation Rep like be Track samples have been sent customer See damage issue hand make assessment complaint resolve 
+__label__0	CSR Sales Rep Plant Rep RQM like be View product quantity order complaint capture product is attributes complaint 
+__label__0	CSR Sales Rep Plant Rep RQM Transportation rep like be create complaint received channels phone email complaint information document information customer log complaint behalf 
+__label__1	CSR Sales Rep Plant Rep RQM Transportation Rep like be Search customer contact Track customer involved complaint know contact questions updates 
+__label__0	need be group case frequency volume brand channel Shipment Volume reports 
+__label__0	Food service users need be create plant cases Users relate Food Service cases Plant Case Add 'Distribution Channel picklist field Plant Case following values Retai Food Service 
+__label__0	customer care team like report provides case response time like report response time time is added queue agent response like be segregated sentiment provided SLA matrix consideration 
+__label__0	Service User want Case status update Open Survey is survey related record want Case Status update Progress surveys are completed 
+__label__0	Reporting User want see Plant case created notification mail sent members Plant Case Queue criteria Plant_Case_Creation_Criteria.xlsx are met Page layout Plant Record type Issue Record type Status Same Consumer Case Related list Impacted Cases 
+__label__0	someone replies case email case state be changed 'Review Reply 
+__label__0	post persona is associated case case is reopened be limit am days reopening case 
+__label__0	n Any Supervisor want view report showing Cases are business days prioritize 
+__label__0	n Any Supervisor want view report showing Cases are business day prioritize 
+__label__0	need case report reports amount cases were responded were considered brand praise were respoonding marketing post paid media ad 
+__label__0	Create report cases speak praise XXX Brand 
+__label__1	Reporting User want view Survey cases are related Cases have visibility questions targeted issues 
+__label__0	Business Admin want schedule reports include captured case refresh are Salesforce sent Distribution List DL group people XXX company has time line sight operations 
+__label__0	n Any Service User want view cases agent are problem areas 
+__label__0	Regulatory group member want be notified cases have Risk selected 
+__label__0	Media group member want be notified cases have Risk selected 
+__label__0	Security Group member want be notified cases have Risk selected 
+__label__0	action investigations pull plant investigation response system link case allow plant access response case 
+__label__0	member food safety alert group want be notified are cases UPC code date 
+__label__0	agent indicates case pics are requested assign case T3 CAG queue update status reflect are 'Awaiting Response 
+__label__0	receive reply consumer mail update status case 'Review Reply 
+__label__0	case updates information pic findings rep is notified 
+__label__0	Case Overdue notifications known chasing notifications notify case owner mail distribution list reply is received determine frequency timing notification based contact criteria 
+__label__0	create queues put cases worker 
+__label__0	Time date stamp tracked displayed cases track updates 
+__label__0	n Any Service User want origin type case populated based contact channel case orgin be reported accuracy 
+__label__0	n want send cases party review notes 
+__label__0	n Manager want report Case count hierarchy levels brand product group SKU have visiblity complaint frequency 
+__label__0	n Any Service User want close case indicate case has been resolved 
+__label__0	ability consumer affairs representative see case offer customer coupon is mailed coupon option 
+__label__0	Service Cloud identify case opened persona has been opened email o phone inquiry merge cases did discuss Twitter does require name individuals add pseudo name be match cases 
+__label__0	Consumer affairs team like see brand case is associated click case queue 
+__label__0	consumer affairs team need be notified manner escalated case hits service cloud queue escalated cases be placed queue escalated words attached file are being notified escalated cases email 
+__label__0	consumer affairs team like ability reply cases device 
+__label__0	want ensure connection Social Studio Service Cloud is sync Social Customer Service is setup Want be show transparency platforms example display case number Social Studio posts routed Service Cloud 
+__label__0	n Any Service User want capture Plant Number Case record provide Plant Number aligned Est Plant Number is listed package maintain data integrity 
+__label__0	n Any Service User want access knowledge base articles related product subject case provide service 
+__label__0	n Any Service User want receive pop existing case call is transferred Agent provide continuity Service 
+__label__0	n Any Service User want have case data product description get pulled letters letter inserts letters are 
+__label__0	n Any Service User want receive letter suggestions based Case codes case handling is 
+__label__0	n Any Service User want view caller history case have communications context 
+__label__0	n Service Manager want track time Agent is assigned case assigns Case Case status is updated closed Case is transferred queue measure performance Measure minutes format Track duration Activity record 
+__label__0	n Service Manager want track time case created case closed provide assistance 
+__label__0	n Any Service User want capture notes Case date stamp Agent name case history is tracked 
+__label__0	n Any Service User want search calls cases consumer info case find Consumer records 
+__label__0	n Any Service User want transfer ownership case own rep escalated cases be reported 
+__label__0	n Any Service User want capture issues Case aligned product issues reported 
+__label__0	n Any Service User want put case follow status researching issue am cases are pending resolution 
+__label__0	Business Admin want import Cases Salesforce formatted file store reports be worked Agents 
+__label__0	n Any Service User want view details cases submitted Consumers online cases users be managed resolved form fields map Case Record type Consumer Web Case generated Salesforce assigned Web Queue Agent selects case assigns self handling reviews mapped lookup fields UPC Contact creates relationships Agent handles case 
+__label__0	n Any Service User want attach pictures case is context case 
+__label__0	n Any Service User want transfer cases queue user assigned queue want pull cases inquiry escalated lab claims cases be handled people Design captured Queues Groups tab Service data dictionary 
+__label__0	Service User want see stages contact email chat text fields fill case based consumer enters contact portion cases be handled 
+__label__0	n Any Service User want pivot Case Contact records refer caller information interaction 
+__label__0	n Any Service User want Sections case read access vs edit abilities based users security level data is protected 
+__label__0	n Any Service User want use form case fields code store address information be captured 
+__label__0	n Any Service User want see drop search case fields UPC Subject code code detail store records be found 
+__label__0	n Any Service User want capture fields case capture detail case 
+__label__0	n Any Service User want relate Case Product XXX report case volume product 
+__label__0	n Any Service User want attach Call Case history be created case 
+__label__0	n Any Service User want capture Tasks case actions be assigned follow 
+__label__0	n Any Service User want capture Comments case detail case be captured 
+__label__0	n Any Service User want be assigned cases based set criteria cases are routed 
+__label__0	n Any Service User want ensure Cases are validated based criteria maintain data integrity quality 
+__label__0	n Any Service User want capture case category case detail case XXX report types cases are being handled 
+__label__0	n Any Service User want capture issue codes codes case XXX report types cases are being handled 
+__label__0	n Any Service User want have escalated Escalation have been business day cases have been duration be prioritized 
+__label__0	n Any Service User want escalate cases cases be prioritized 
+__label__0	Any User want assign cases queues cases be handled PFA list queues created part story 

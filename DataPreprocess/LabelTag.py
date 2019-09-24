@@ -1,6 +1,4 @@
 import pandas as pd
-import numpy as np
-
 
 df = pd.read_excel('/Users/zlu024/Documents/project/USTag/Files/SFDC Projects Case Requirements Analysis - V2.xlsx')
 
@@ -17,6 +15,3 @@ for tag in TagName:
     dataframe = pd.DataFrame(res, columns = [tag])
     dataframe.index.name = 'TagID'
     dataframe.to_csv('/Users/zlu024/Documents/project/USTag/Files/' + tag +'TagID.csv')
-
-
-

@@ -1,0 +1,132 @@
+,Capability,Sub-Capability,Epic
+0,Plan and manage customer service operations,Manage customer complaints,Manage shipment
+1,Plan and manage customer service operations,Manage customer complaints,Manage shipment
+2,Plan and manage customer service operations,Manage customer complaints,Manage invoice
+3,Plan and manage customer service operations,Manage customer complaints,Approve complaint
+4,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+5,Plan and manage customer service operations,Manage customer complaints,Close complaint
+6,Plan and manage customer service operations,Manage customer complaints,Manage shipment
+7,Plan and manage customer service operations,Manage customer complaints,Manage invoice
+8,Plan and manage customer service operations,Manage customer complaints,Sales support
+9,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+10,Plan and manage customer service operations,Manage customer complaints,Complaint process control
+11,Plan and manage customer service operations,Manage customer complaints,Manage shipment
+14,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+15,Plan and manage customer service operations,Manage customer complaints,Technical support
+16,Measure and evaluate customer satisfaction,Measure customer satisfaction level,Customer feedback
+17,Plan and manage customer service operations,Manage customer complaints,Sales support
+18,Plan and manage customer service operations,Manage customer complaints,Manage customer credit
+19,Plan and manage customer service operations,Manage customer complaints,Manage customer credit
+20,Plan and manage customer service operations,Manage customer complaints,Complaint process control
+21,Plan and manage customer service operations,Manage customer complaints,Create complaint
+22,Plan and manage customer service operations,Manage customer complaints,Complaint process control
+24,Plan and manage customer service operations,Manage customer complaints,Complaint process control
+25,Plan and manage customer service operations,Manage customer complaints,Enrich reference data
+26,Plan and manage customer service operations,Manage customer complaints,Manage customer credit
+27,Plan and manage customer service operations,Manage customer complaints,Close complaint
+29,Plan and manage customer service operations,Manage customer complaints,Financial control
+30,Plan and manage customer service operations,Manage customer complaints,Complaint process control
+31,Plan and manage customer service operations,Manage customer complaints,Financial control
+32,Plan and manage customer service operations,Manage customer complaints,Complaint process control
+36,Plan and manage customer service operations,Manage customer complaints,Manage customer credit
+37,Plan and manage customer service operations,Manage customer complaints,Mobility
+38,Plan and manage customer service operations,Manage customer complaints,Manage invoice
+39,Plan and manage customer service operations,Manage customer complaints,Manage customer credit
+40,Plan and manage customer service operations,Manage customer complaints,Technical support
+41,Plan and manage customer service operations,Manage customer complaints,Manage shipment
+42,Plan and manage customer service operations,Manage customer complaints,Manage customer credit
+44,Plan and manage customer service operations,Manage customer complaints,Manage customer credit
+45,Plan and manage customer service operations,Manage customer complaints,Manage shipment
+46,Plan and manage customer service operations,Manage customer complaints,Manage account
+47,Plan and manage customer service operations,Manage customer complaints,Create complaint
+48,Plan and manage customer service operations,Manage customer complaints,Manage entitlement
+49,Plan and manage customer service operations,Manage customer complaints,Generate opportunity
+50,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+51,Plan and manage customer service operations,Manage customer complaints,Complaint process control
+52,Plan and manage customer service operations,Manage customer complaints,Create complaint
+53,Plan and manage customer service operations,Manage customer complaints,Manage customer credit
+54,Plan and manage customer service operations,Manage customer complaints,Technical support
+55,Plan and manage customer service operations,Manage customer complaints,Track updates
+56,Plan and manage customer service operations,Manage customer complaints,Manage complaint response
+57,Plan and manage customer service operations,Manage customer complaints,Close complaint
+58,Plan and manage customer service operations,Manage customer complaints,Create complaint
+59,Plan and manage customer service operations,Manage customer complaints,Knowledge management
+60,Plan and manage customer service operations,Manage customer complaints,Knowledge management
+61,Plan and manage customer service operations,Manage customer complaints,Complaint print & export
+62,Plan and manage customer service operations,Manage customer complaints,Track updates
+63,Plan and manage customer service operations,Manage customer complaints,Complaint process control
+64,Plan and manage customer service operations,Manage customer complaints,Collaboration
+65,Plan and manage customer service operations,Manage customer complaints,Complaint process control
+67,Plan and manage customer service operations,Manage customer complaints,Technical support
+68,Plan and manage customer service operations,Manage customer complaints,Sales support
+69,Plan and manage customer service operations,Manage customer complaints,Create complaint
+70,Measure and evaluate customer satisfaction,Measure customer satisfaction level,Customer feedback
+72,Plan and manage customer service operations,Manage customer service requests/inquiries,Manage shipment
+77,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case 
+79,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+80,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+81,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case 
+82,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+83,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case 
+84,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+85,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+86,Plan and manage customer service operations,Manage customer service requests/inquiries,Case analysis
+87,Plan and manage customer service operations,Manage customer service requests/inquiries,Case analysis
+88,Measure and evaluate customer satisfaction,Measure customer satisfaction level,View survey
+89,Plan and manage customer service operations,Manage customer service requests/inquiries,Ensure client visibility
+90,Plan and manage customer service operations,Manage customer complaints,View complaint
+91,Plan and manage customer service operations,Manage customer service requests/inquiries,Regulatory control
+92,Plan and manage customer service operations,Manage customer service requests/inquiries,Media control
+93,Plan and manage customer service operations,Manage customer service requests/inquiries,Security control
+94,Plan and manage customer service operations,Manage customer complaints,Enrich reference data
+95,Plan and manage customer service operations,Manage customer complaints,Quality control
+96,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+97,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+98,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+99,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+101,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+102,Plan and manage customer service operations,Manage customer service requests/inquiries,Track update history
+104,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case 
+105,Plan and manage customer service operations,Manage customer service requests/inquiries,Collaboration
+107,Plan and manage customer service operations,Manage customer complaints,Quality control
+108,Plan and manage customer service operations,Manage customer service requests/inquiries,Close case
+109,Plan and manage customer service operations,Manage customer service requests/inquiries,Enhance customer satisfaction level
+111,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case 
+112,Plan and manage customer service operations,Manage customer service requests/inquiries,View case
+113,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+114,Plan and manage customer service operations,Manage customer service requests/inquiries,Mobility
+115,Plan and manage customer service operations,Manage customer service requests/inquiries,Collect feedback & request through channels
+116,Plan and manage customer service operations,Manage customer service requests/inquiries,Manage plant
+117,Plan and manage customer service operations,Manage customer service requests/inquiries,Knowledge management
+118,Plan and manage customer service operations,Manage customer service requests/inquiries,Enhance customer satisfaction level
+119,Plan and manage customer service operations,Manage customer service requests/inquiries,Case print & export
+120,Plan and manage customer service operations,Manage customer service requests/inquiries,Knowledge management
+122,Plan and manage customer service operations,Manage customer service requests/inquiries,View case
+125,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+126,Plan and manage customer service operations,Manage customer service workforce,Manage performance
+127,Plan and manage customer service operations,Manage customer service requests/inquiries,Track update history
+128,Plan and manage customer service operations,Manage customer service requests/inquiries,Search case
+129,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+130,Plan and manage customer service operations,Manage customer complaints,Quality control
+131,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+132,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case 
+135,Plan and manage customer service operations,Manage customer service requests/inquiries,View case
+136,Plan and manage customer service operations,Manage customer service requests/inquiries,Enrich reference data
+137,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+138,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case 
+139,Plan and manage customer service operations,Manage customer service requests/inquiries,View related contacts
+141,Plan and manage customer service operations,Manage customer service requests/inquiries,Security control
+142,Plan and manage customer service operations,Manage customer service requests/inquiries,Create & open case 
+143,Plan and manage customer service operations,Manage customer service requests/inquiries,View case
+144,Plan and manage customer service operations,Manage customer service requests/inquiries,View case
+145,Plan and manage customer service operations,Manage customer service requests/inquiries,Case analysis
+146,Plan and manage customer service operations,Manage customer service requests/inquiries,Enrich reference data
+147,Plan and manage customer service operations,Manage customer service requests/inquiries,Manage case task
+148,Plan and manage customer service operations,Manage customer service requests/inquiries,Collaboration
+149,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+150,Plan and manage customer service operations,Manage customer service requests/inquiries,Validate case
+151,Plan and manage customer service operations,Manage customer service requests/inquiries,View case
+152,Plan and manage customer service operations,Manage customer service requests/inquiries,View case
+153,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+154,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
+155,Plan and manage customer service operations,Manage customer service requests/inquiries,Process control
