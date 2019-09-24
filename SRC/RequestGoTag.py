@@ -1,12 +1,13 @@
 import requests
 import json
 
-def requestGoTag(body, tagid):
-    # if tagid > 3:
-    #     return print('exceed max tagid ')
+def requestGoTag(body, tagid= None):
     url = "http://localhost:1333/user_story/similar"
+    if tagid:
+        payload =  "{\n\t\"body\": \"" + body + "\",\n\t\"tagId\":" + str(tagid) + "\n}"
+    else:
+        payload = "{\n\t\"body\": \"" + body + "\"\n}\n"
 
-    payload =  "{\n\t\"body\": \"" + body + "\",\n\t\"tagId\":" + str(tagid) + "\n}"
     headers = {
         'Content-Type': "application/json",
         'User-Agent': "PostmanRuntime/7.16.3",
@@ -22,7 +23,17 @@ def requestGoTag(body, tagid):
 
     response = requests.request("POST", url, data=payload, headers=headers)
     result = json.loads(response.text)
+    return result
+
+def GetResult(result):
     capability = result[0]['capability']
     subcapability = result[0]['subcapability']
     epic = result[0]['epic']
     return capability, subcapability, epic
+
+
+text_second = requestGoTag('hr')
+texts2 = []
+for i in range(5):
+    texts2.append([text_second[i]['body'], text_second[i]['Score']])
+print(texts2)

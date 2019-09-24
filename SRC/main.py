@@ -29,8 +29,8 @@ def get_tagId(taglabel, tag):
     tag_file = pd.read_csv('../Files/'+ tag + 'TagID.csv')
     return int(tag_file[tag_file[tag] == taglabel]['TagID'])
 
-import SRC.RequestGoTag as RequestGoTag
-a = RequestGoTag.requestGoTag('as a hr', 1)
-print(type(a))
-for t in a:
-    print(t)
+# import SRC.RequestGoTag as RequestGoTag
+# a = RequestGoTag.requestGoTag('as a hr', 1)
+# print(type(a))
+# for t in a:
+#     print(t)

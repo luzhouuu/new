@@ -9,3 +9,7 @@ Sub-Capability.test
 database.ini
 
 WordCloud.py
+
+.DS_Store
+
+CrossValidation.py

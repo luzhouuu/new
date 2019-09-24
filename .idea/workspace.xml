@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14224f58-f708-4793-9830-fb9fa8f45bde" name="Default Changelist" comment="updated on 15 June">
-      <change afterPath="$PROJECT_DIR$/Files/row_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SRC/CrossValidation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SRC/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataPreprocess/ConnectToDB" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocess/ConnectToDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataPreprocess/LabelTag.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocess/LabelTag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataPreprocess/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocess/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataPreprocess/database.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocess/database.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/FastText.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/FastText.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/FastText.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SRC/RequestGoTag.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/RequestGoTag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/gotest.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SRC/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/model_userstory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/run_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/run_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/run_server.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SRC/templates/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/templates/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/use.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocess/WordCloud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/df.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/df.train" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +49,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.run">
     <configuration name="CrossValidation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="USTag" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,9 +178,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python.RequestGoTag" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.FastText" />
         <item itemvalue="Python.CrossValidation" />
       </list>

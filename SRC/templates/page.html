@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 {% block title %}User Story Label Demo{% endblock %}
 {% block content %}
-    <h1>Label The User Story</h1>
+    <h1>User Story Recommend System</h1>
     <form method="post">
         <div class="form-group">
 <!--            <label for="title">Please input your Title</label>-->
 <!--            <textarea class="form-control" id="title" name="title" rows="1">{{ title }}</textarea>-->
             <label for="prompt">Please input your User Story</label>
-            <textarea class="form-control" id="prompt" name="prompt" rows="6">{{ prompt }}</textarea>
+            <textarea class="form-control" id="prompt" name="prompt" rows="4">{{ prompt }}</textarea>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Recommend</button>
         </div>
     </form>
 
-    <h3 class="title">Recommend Tag of User Stories By Fast Text</h3>
 {% if texts  %}
+    <h3 class="title">Recommend Tag of User Stories By Fast Text</h3>
         <div class="seifer-card">
             <div class="line">
                 <p class="title">Capability:</p>
@@ -32,7 +32,21 @@
 
         </div>
 {% endif %}
-    
+
+{% for t in texts2  %}
+    <h4 class="title">Relevant User Stories</h4>
+        <div class="seifer-card">
+            <div class="line">
+                <p class="title">User Story</p>
+                <p class="text">{{ t[0] }}</p>
+            </div>
+            <div class="line">
+                <p class="title">Similarity:</p>
+                <p class="text">{{ t[1] }}</p>
+            </div>
+
+        </div>
+{% endfor %}
 
     <a href="https://fasttext.cc">[FastText]</a>
     <a href="https://openai.com/blog/better-language-models/">[GPT-2]</a>
