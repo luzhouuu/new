@@ -32,7 +32,7 @@ def open_server():
             texts2 = []
             text_second = RequestGoTag.requestGoTag(prompt)
             for i in range(3):
-                texts2.append([text_second[i]['body'], str(round(text_second[i]['Score']*100,2)) + '%'])
+                texts2.append([text_second[i]['result'], str(round(text_second[i]['Score']*100,2)) + '%'])
 
 
         #else:
