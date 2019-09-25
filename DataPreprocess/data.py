@@ -28,10 +28,20 @@ def DataClean(df):
     df = df[df['Capability'].isnull() != True]
     return df
 
-def labeltxt(Tag, df):
-    file = open('../Files/training_' + Tag + '.txt', 'w')
+def tag_to_int (Tag):
     tag = pd.read_csv('../Files/' + Tag + 'TagID.csv').to_dict()[Tag]
-    tag = {b:a for a,b in tag.items()}
+    tag = {b: a for a, b in tag.items()}
+    return tag
+
+print(tag_to_int('Capability'))
+
+
+def labeltxt(Tag, df, prefix = None):
+    if prefix != None:
+        file = open('../Files/txtfiles/' + prefix + Tag + '.txt', 'w')
+    else:
+        file = open('../Files/txtfiles/' + Tag + '.txt', 'w')
+    tag = tag_to_int(Tag)
 
     def addlable(row):
         return '__label__' + str(tag[row])
@@ -46,4 +56,21 @@ if __name__ == "__main__":
     df = pd.read_excel('../Files/SFDC Projects Case Requirements Analysis - V2.xlsx',
                        sheet_name='User Stories')
     df = DataClean(df)
-    labeltxt('Sub-Capability', df)
+    print(df['Capability'].unique())
+    # 20 times of 'Measure and evaluate customer satisfaction'
+    df_less = df[df['Capability'] == 'Measure and evaluate customer satisfaction']
+    for i in range(20):
+        df = df.append(df_less)
+
+    # labeltxt('Capability', df)
+    df = pd.read_excel('../Files/SFDC Projects Case Requirements Analysis - V2.xlsx',
+                       sheet_name='User Stories')
+    df = DataClean(df)
+    Tag_capability = pd.read_csv('../Files/CapabilityTagID.csv')["TagID"]
+    print(Tag_capability)
+
+    dict_int_to_tag = int_to_tag('Capability')
+    for i in range(len(Tag_capability)):
+        df_subset = df[df['Capability'] == dict_int_to_tag[i]]
+        labeltxt('Sub-Capability', df_subset, str(i)) # put a prefix label in the name of txt file
+

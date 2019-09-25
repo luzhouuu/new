@@ -1,0 +1,3 @@
+__label__2	Sales Rep like receive notification complaint has been closed cancelled contact customer 
+__label__2	CSR Sales Rep Plant Rep RQM Transportation Rep like be Search customer contact Track customer involved complaint know contact questions updates 
+__label__2	Reporting User want view Survey cases are related Cases have visibility questions targeted issues 

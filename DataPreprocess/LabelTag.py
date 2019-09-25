@@ -1,6 +1,7 @@
 import pandas as pd
 
-df = pd.read_excel('/Users/zlu024/Documents/project/USTag/Files/SFDC Projects Case Requirements Analysis - V2.xlsx')
+df = pd.read_excel('../Files/SFDC Projects Case Requirements Analysis - V2.xlsx',
+                   sheet_name = 'User Stories')
 
 TagName = ['Capability', 'Sub-Capability', 'Epic']
 
@@ -14,4 +15,4 @@ for tag in TagName:
     #                          columns = ['TagID', 'Capability'])
     dataframe = pd.DataFrame(res, columns = [tag])
     dataframe.index.name = 'TagID'
-    dataframe.to_csv('/Users/zlu024/Documents/project/USTag/Files/' + tag +'TagID.csv')
+    dataframe.to_csv('../Files/' + tag +'TagID.csv')
