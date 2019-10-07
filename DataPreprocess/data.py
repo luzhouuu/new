@@ -33,9 +33,6 @@ def tag_to_int (Tag):
     tag = {b: a for a, b in tag.items()}
     return tag
 
-print(tag_to_int('Capability'))
-
-
 def labeltxt(Tag, df, prefix = None):
     if prefix != None:
         file = open('../Files/txtfiles/' + prefix + Tag + '.txt', 'w')
@@ -43,8 +40,8 @@ def labeltxt(Tag, df, prefix = None):
         file = open('../Files/txtfiles/' + Tag + '.txt', 'w')
     tag = tag_to_int(Tag)
 
-    def addlable(row):
-        return '__label__' + str(tag[row])
+    # def addlable(row):
+    #     return '__label__' + str(tag[row])
 
     l = df[Tag].apply(lambda row: '__label__' + str(tag[row]))
     L =list(l + '\t' + df['User Story'] + '\n')

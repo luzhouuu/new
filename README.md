@@ -19,6 +19,31 @@ Git clone this repository, and `cd` into directory for remaining commands
 git clone https://github.com/luzhouuu/UserstoreisTag
 ```
 
+# train_supervised parameters
+
+```
+input             # training file path (required)
+    lr                # learning rate [0.1]
+    dim               # size of word vectors [100]
+    ws                # size of the context window [5]
+    epoch             # number of epochs [5]
+    minCount          # minimal number of word occurences [1]
+    minCountLabel     # minimal number of label occurences [1]
+    minn              # min length of char ngram [0]
+    maxn              # max length of char ngram [0]
+    neg               # number of negatives sampled [5]
+    wordNgrams        # max length of word ngram [1]
+    loss              # loss function {ns, hs, softmax, ova} [softmax]
+    bucket            # number of buckets [2000000]
+    thread            # number of threads [number of cpus]
+    lrUpdateRate      # change the rate of updates for the learning rate [100]
+    t                 # sampling threshold [0.0001]
+    label             # label prefix ['__label__']
+    verbose           # verbose [2]
+    pretrainedVectors # pretrained word vectors (.vec file) for supervised learning []
+```
+
+
 ### Requirement
 
 ```
